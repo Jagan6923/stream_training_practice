@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ID and Class Example</title>
+    <link rel="stylesheet" href="./style/8Style.css" />
+    <style>
+        /* Style for elements with the class "highlight" */
+        .highlight {
+            background-color: yellow;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style for the element with the id "special" */
+        #special {
+            color: red;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        function changeText() {
+            // Change text of the element with id "special"
+            document.getElementById("special").innerText = "Text Changed!";
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Demonstration of ID and Class</h1>
+        <p>This page shows the difference between reusable classes and unique IDs.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Class Attribute</h2>
+            <p class="highlight">
+                This paragraph has a class of "highlight". It uses the class to apply a
+                background color and padding.
+            </p>
+
+            <p class="highlight">
+                Another paragraph with the class "highlight". The same styles are applied
+                as in the first paragraph with the "highlight" class.
+            </p>
+        </section>
+
+        <section>
+            <h2>ID Attribute</h2>
+            <p id="special">
+                This paragraph has an id of "special". It uses the id to apply a unique
+                text color, font weight, and size.
+            </p>
+            <button type="button" onclick="changeText()">Change Text</button>
+        </section>
+    </main>
+</body>
+
+</html>

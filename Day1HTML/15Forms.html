@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML Forms</title>
+</head>
+
+<body>
+  <header>
+    <h1>HTML Forms Demonstration</h1>
+    <p>This page groups common form controls into a single readable example.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>What this form covers</h2>
+      <ul>
+        <li>Text inputs with validation attributes such as <strong>required</strong> and <strong>minlength</strong></li>
+        <li>Special input types such as <strong>email</strong>, <strong>date</strong>, <strong>time</strong>, and <strong>url</strong></li>
+        <li>Selection controls including <strong>checkbox</strong>, <strong>radio</strong>, and <strong>select</strong></li>
+        <li>Action buttons for submitting, resetting, and triggering a simple alert</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Form Elements</h2>
+  <form action="#" method="post" autocomplete="on">
+    <p>
+      <label for="text">Name (required)</label><br />
+      <input type="text" id="text" name="text" placeholder="Enter your name" required />
+    </p>
+
+    <p>
+      <label for="email">Email</label><br />
+      <input autofocus type="email" id="email" name="email" placeholder="abc@xyz.com" />
+    </p>
+
+    <p>
+      <label for="password">Password</label><br />
+      <input type="password" id="password" name="password" minlength="8" />
+    </p>
+
+    <p>
+      <label for="number">Age (1 to 100)</label><br />
+      <input type="number" id="number" name="number" min="1" max="100" value="30" />
+    </p>
+
+    <p>
+      <label for="url">Website URL</label><br />
+      <input type="url" id="url" name="url" placeholder="https://example.com" />
+    </p>
+
+    <p>
+      <label for="date">Date</label><br />
+      <input type="date" id="date" name="date" value="2024-01-01" />
+    </p>
+
+    <p>
+      <label for="time">Time</label><br />
+      <input type="time" id="time" name="time" value="12:00" />
+    </p>
+
+    <p>
+      <label for="datetime-local">Date and time</label><br />
+      <input type="datetime-local" id="datetime-local" name="datetime-local" value="2024-01-01T12:00" />
+    </p>
+
+    <p>
+      <label for="month">Month</label><br />
+      <input type="month" id="month" name="month" value="2024-08" />
+    </p>
+
+    <p>
+      <label for="week">Week</label><br />
+      <input type="week" id="week" name="week" value="2024-W01" />
+    </p>
+
+    <p>
+      <label for="tel">Telephone</label><br />
+      <input type="tel" id="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" />
+    </p>
+
+    <p>
+      <label for="textarea">Message</label><br />
+      <textarea id="textarea" name="textarea" rows="4" cols="50" maxlength="200"
+        placeholder="Enter your message"></textarea>
+    </p>
+
+    <p>
+      <label for="LLM">Choose a tool</label><br />
+      <select id="LLM" name="LLM" required>
+        <optgroup label="Text">
+          <option value="GPT-4">ChatGPT</option>
+          <option value="Gemini">Gemini</option>
+          <option value="Claude">Claude</option>
+        </optgroup>
+        <optgroup label="Image">
+          <option value="DALL-E">DALL-E</option>
+          <option value="Midjourney">Midjourney</option>
+          <option value="DeepArt">DeepArt</option>
+        </optgroup>
+      </select>
+    </p>
+
+    <fieldset>
+      <legend>Preferred languages</legend>
+      <label><input type="checkbox" name="language" value="JavaScript" /> JavaScript</label><br />
+      <label><input type="checkbox" name="language" value="Python" /> Python</label><br />
+      <label><input type="checkbox" name="language" value="R" /> R</label><br />
+      <label><input type="checkbox" name="language" value="Rust" /> Rust</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Theme</legend>
+      <label><input type="radio" name="theme" value="light" /> Light theme</label><br />
+      <label><input type="radio" name="theme" value="dark" /> Dark theme</label>
+    </fieldset>
+
+    <p>
+      <button type="button" onclick="alert('You are awesome!')">Press me</button>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </p>
+  </form>
+    </section>
+  </main>
+</body>
+
+</html>

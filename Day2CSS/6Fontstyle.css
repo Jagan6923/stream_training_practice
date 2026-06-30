@@ -1,0 +1,74 @@
+/* Basic Reset */
+body,
+h1,
+h2,
+p {
+  margin: 0px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  padding: 20px;
+  line-height: 1.6;
+}
+h2 {
+  color: dodgerblue;
+}
+/* Font Family */
+.sans-serif {
+  font-family: "Arial", sans-serif;
+}
+
+.serif {
+  font-family: "Georgia", serif;
+}
+
+.monospace {
+  font-family: "Courier New", monospace;
+}
+
+/* Font Size */
+.small {
+  font-size: 12px;
+}
+
+.medium {
+  font-size: 18px;
+}
+
+.large {
+  font-size: 24px;
+}
+
+/* Font Weight */
+.light-weight {
+  font-weight: 400;
+}
+
+.heavy-weight {
+  font-weight: 900;
+}
+
+/* Font Style */
+.italic {
+  font-style: italic;
+}
+
+/* Font Variant */
+.small-caps {
+  font-variant: small-caps;
+}
+
+/* Font Shorthand : Syntax: <font-style> || <font-variant> || <font-weight> || <font-size> / <line-height> || <font-family> */
+.shorthand {
+  font: italic small-caps bold 20px/1.5 "Times New Roman", serif;
+}
+
+/* Web Fonts - Google Fonts Example */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.web-font {
+  font-family: "Roboto", sans-serif;
+}
+ 

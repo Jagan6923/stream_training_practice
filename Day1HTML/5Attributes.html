@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attributes Demo</title>
+  <link rel="stylesheet" href="./style/8Style.css" />
+
+  <style>
+    #main-title {
+      background-color: brown;
+      color: aqua;
+      padding: 0.5rem;
+    }
+
+    .sample {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1 id="main-title">Welcome to HTML Attributes Demo</h1>
+    <p>This page shows how IDs, classes, title text, inline styles, and data attributes work.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Class Attribute</h2>
+      <p class="sample">This paragraph uses the class attribute.</p>
+      <p class="sample">This paragraph shares the same class styling.</p>
+    </section>
+
+    <section>
+      <h2>Title and Inline Style Attributes</h2>
+      <div title="Styled with inline CSS" style="color: aquamarine; font-size: 24px" data-role="highlight">
+        This div uses inline CSS, a title attribute, and a data attribute.
+      </div>
+    </section>
+
+    <section>
+      <h2>Key Ideas</h2>
+      <ul>
+        <li><strong>id</strong> should be unique on a page</li>
+        <li><strong>class</strong> can be reused on many elements</li>
+        <li><strong>data-*</strong> attributes store custom information</li>
+      </ul>
+    </section>
+  </main>
+</body>
+
+</html>

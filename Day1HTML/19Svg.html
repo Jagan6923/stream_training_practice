@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Demo</title>
+    <link rel="stylesheet" href="./style/8Style.css" />
+    <style>
+        svg {
+            border: 1px solid #000;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SVG Demonstration</h1>
+        <p>SVG creates resolution-independent graphics using XML-style elements.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Vector drawing</h2>
+            <svg width="400" height="400">
+                <rect x="10" y="10" width="100" height="100" fill="blue" stroke="black" stroke-width="2" />
+                <circle cx="200" cy="200" r="50" fill="green" stroke="black" stroke-width="2" />
+                <line x1="300" y1="300" x2="350" y2="350" stroke="red" stroke-width="4" />
+                <text x="20" y="150" font-family="Verdana" font-size="20" fill="black">
+                    Hello SVG!
+                </text>
+            </svg>
+        </section>
+
+        <section>
+            <h2>Why SVG is useful</h2>
+            <p>SVG scales cleanly without losing sharpness, which makes it ideal for icons, logos, and simple diagrams.</p>
+        </section>
+    </main>
+</body>
+
+</html>

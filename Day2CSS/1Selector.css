@@ -1,0 +1,90 @@
+/* Element */
+h5 {
+    color: blue;
+}
+
+/* Class */
+.highlight {
+    background-color: chartreuse;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ID Selector */
+#sampleid {
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Universal selector */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Attribute selector */
+a[title] {
+    /* a[href] a[href=#] */
+    color: green;
+    font-style: italic;
+}
+
+/* descendant */
+.container p {
+    background-color: blueviolet;
+    padding: 10px;
+    color: aqua;
+}
+
+/* Child */
+.parent>p {
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+/* Sibling */
+.general-first~p {
+    background-color: pink;
+    padding: 10px;
+}
+
+.first+p {
+    background-color: lightcoral;
+    padding: 10px;
+}
+
+h3,
+h4 {
+    color: forestgreen;
+    font-weight: bold;
+}
+
+p.important {
+    background-color: blanchedalmond;
+}
+
+div.important {
+    background-color: aquamarine;
+}
+
+/* Multiple css classes */
+.message {
+    padding: 0.5em;
+    background-color: bisque;
+}
+
+.message.warning {
+    color: red;
+    font-weight: bold;
+}
+
+/* Pseudo-class Selector */
+.hover-effect:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.hover-effect:focus {
+    background-color: green;
+    cursor: pointer;
+}

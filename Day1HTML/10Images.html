@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Tag</title>
+  <link rel="stylesheet" href="./style/8Style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Demonstrating the Image and Picture Tags</h1>
+    <p>Use images carefully with alt text, size, and responsive sources.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Using the img Tag</h2>
+      <figure>
+        <img src="../images/google.png" alt="Google logo" width="300" height="200" />
+        <figcaption>Simple image inserted with the img element.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="unknown.png" alt="Fallback text for a missing image" width="300" height="200" />
+        <figcaption>
+          This example shows how alt text helps when an image cannot load.
+        </figcaption>
+      </figure>
+      <p>The <code>img</code> element should always include meaningful alt text.</p>
+    </section>
+
+    <section>
+      <h2>Using the picture Element</h2>
+      <p>The <code>picture</code> element lets the browser choose the best source for the viewport size.</p>
+      <picture>
+        <source srcset="../images/google.png" media="(max-width:600px)" />
+        <source srcset="../images/css_logo.png" media="(min-width: 601px)" />
+        <img src="../images/fallback.jpg" alt="Responsive image example" width="600" height="400" />
+      </picture>
+    </section>
+  </main>
+
+  <footer>
+    <p>Concepts covered: img, alt text, figure, figcaption, and picture.</p>
+  </footer>
+</body>
+
+</html>

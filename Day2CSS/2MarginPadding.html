@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Margin and Padding</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        background-color: #ddd;
+        padding: 20px;
+        margin: 20px;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+      }
+
+      .box {
+        background-color: #6c63ff;
+        color: white;
+        padding: 30px;
+        margin: 15px;
+        border-radius: 10px;
+      }
+
+      .box-small-margin {
+        margin: 5px;
+      }
+
+      .box-large-margin {
+        margin: 40px;
+      }
+
+      .box-small-padding {
+        padding: 5px;
+      }
+
+      .box-large-padding {
+        padding: 50px;
+      }
+      .box-different-margin {
+        margin-top: 100px; /* same as margin: 25px 50px 75px 100px; */
+        margin-bottom: 100px;
+        margin-right: 150px;
+        margin-left: 80px;
+      }
+      .box-centered {
+        margin: 0 auto;
+        width: 50%;
+      }
+      .box-first {
+        margin-bottom: 50px;
+      }
+      .box-second {
+        margin-top: 50px;
+      }
+      .note {
+        font-size: 18px;
+        padding: 15px;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Margin and Padding Demo</h2>
+    <div class="container">
+      <h2>Box with Default Margin and Padding</h2>
+      <div class="box">This box has 15px margin and 30px padding.</div>
+
+      <h2>Box with Small Margin</h2>
+      <div class="box box-small-margin">This box has 5px margin.</div>
+
+      <h2>Box with Large Margin</h2>
+      <div class="box box-large-margin">This box has 40px margin.</div>
+
+      <h2>Box with Small Padding</h2>
+      <div class="box box-small-padding">This box has 5px padding.</div>
+
+      <h2>Box with Large Padding</h2>
+      <div class="box box-large-padding">This box has 50px padding.</div>
+      <h2>Box with different margins on all sides</h2>
+      <div class="box box-different-margin">
+        This box has Top-25px Right-50px Bottom-75px Left-100px margin.
+      </div>
+
+      <h2>Box centered with auto margin</h2>
+      <div class="box box-centered">
+        This div will be horizontally centered because it has margin: 0 auto;
+      </div>
+      <h2>Margin collapse</h2>
+      <div class="box box-first">
+        This is the first box. It has a bottom margin of 50px.
+      </div>
+      <div class="box box-second">
+        This is the second box. It has a top margin of 50px.
+      </div>
+      <div class="note">
+        Due to margin collapse, the vertical margin between these two boxes is
+        50px instead of 100px.
+      </div>
+    </div>
+  </body>
+</html>
+ 

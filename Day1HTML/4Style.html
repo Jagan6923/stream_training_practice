@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style and Script Example</title>
+  <link rel="stylesheet" href="./style/8Style.css" />
+
+  <style>
+    body {
+      color: blue;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Style and Script Example</h1>
+    <p>This page shows how internal CSS and JavaScript work together.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Internal CSS</h2>
+      <p>The text starts in blue because of the internal style block.</p>
+    </section>
+
+    <section>
+      <h2>JavaScript Action</h2>
+      <button id="color-button" type="button">Change text color to red</button>
+    </section>
+  </main>
+
+  <script>
+    const colorButton = document.getElementById("color-button");
+
+    colorButton.addEventListener("click", function () {
+      document.body.style.color = "red";
+    });
+  </script>
+
+  <footer>
+    <p>Concepts covered: internal CSS, DOM selection, and click events.</p>
+  </footer>
+</body>
+
+</html>

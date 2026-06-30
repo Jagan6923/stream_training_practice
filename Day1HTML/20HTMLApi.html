@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geolocation API Demo</title>
+</head>
+
+<body>
+    <header>
+        <h1>Geolocation API Demo</h1>
+        <p>This page shows how the browser can request the user's current location with permission.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>What this example demonstrates</h2>
+            <ul>
+                <li>The <strong>Geolocation API</strong> can return latitude and longitude.</li>
+                <li>Browsers ask the user for permission before sharing location data.</li>
+                <li>Success and error messages should be shown clearly in the page.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Try it</h2>
+            <button type="button" onclick="getLocation()">Get My Location</button>
+            <div id="location">
+                <p id="status">Click the button to request your current location.</p>
+                <p id="coords"></p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function getLocation() {
+            const status = document.getElementById("status");
+            const coords = document.getElementById("coords");
+
+            if (!navigator.geolocation) {
+                status.textContent = "Geolocation is not supported by your browser.";
+                coords.textContent = "";
+                return;
+            }
+
+            status.textContent = "Requesting your location...";
+            coords.textContent = "";
+
+            navigator.geolocation.getCurrentPosition(success, error);
+
+            function success(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                status.textContent = "Location found:";
+                coords.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+            }
+
+            function error() {
+                status.textContent = "Unable to retrieve your location.";
+                coords.textContent = "Please check browser permissions and try again.";
+            }
+        }
+    </script>
+</body>
+
+</html>

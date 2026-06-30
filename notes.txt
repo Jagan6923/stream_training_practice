@@ -1,0 +1,268 @@
+3 Core Technologies 
+1. HTML
+2. CSS 
+3. JavaScript
+ 
+HTML 
+- Hyper Text Markup Language 
+- Define/ Create the structure of a web page 
+- Made up of HTML Tags & Elements
+ 
+ 
+HTML Agebda 
+- Introduction to HTML 
+- HTML Elements & Attribututes 
+- HTML Semantics 
+- HTML Styles & CSS 
+- HTML Links
+- Images 
+- Lists 
+- Table 
+- Classes & ID 
+- IFrames 
+- Responsive 
+- Forms 
+- Media 
+- Canvas & SVG 
+- HTML APis
+ 
+HTML 5 ------ 5th version of HTML ------ present the content for the web
+ 
+Developed by 2 groups 
+- W3C - World Wide web Consortium 
+- WHATWG - Web Hypertext Application Technology Working Group
+ 
+Features 
+1. Simple 
+2. New semantic Elements - Improves accessibility and SEO 
+3. Platform Independant 
+4. Audio & Video support 
+5 Readable 
+6. Flexible 
+7. Linkable
+ 
+IDE 
+- VS CODE
+ 
+- C://lkm_trainings/project_29thjune2026_ases/index.html
+ 
+HTML Tags - < > -- headings, paragraphs, forms, tables, a, image 
+HTML Elememt - Starting from the opening tag till the closing tag 
+- An HTML Tag with attribute and content is called an HTML Element
+ 
+<p>This is a para </p>
+ 
+Extension - .html
+ 
+Meta tags - Define baout the meta data about the web page
+ 
+Attributes 
+- Provide some additional info about the tag 
+- <img src="path of the image" alt="alt text" />
+- class, id , name, type, maxlength, minlength
+ 
+<p id="demo">
+ 
+#demo{
+    color: red;
+    backgorund-color: blue;
+}
+ 
+#two{
+        color: red;
+    backgorund-color: blue;
+    font-size: 18px
+}
+ 
+<p id = "demo">
+<p class="sample">
+<p class="sample">
+ 
+.sample{
+    color: yellow;
+    backgorund-color: red;
+}
+ 
+JS - <script>
+    - JS Code 
+</script>
+ 
+Semantic Tags - Clear meaning to the browser and developer 
+    Ex: aside, header, footer, image, main, nav, article
+ 
+Non Sematic tags - Div and span tags - Tell nothing about its content 
+<div class="header">   
+<div class="footer">
+<div class="aside">
+ 
+Header 
+Nav links ----Home About Services Contact Sign Up Blog
+ 
+Main
+ 
+    article 
+                                                facebook 
+                                                Instagram 
+    Section 
+        Artcile 1 
+        Artcile 2
+ 
+Footer
+ 
+CSS - Cascading Style sheet - Style the web Application
+    - Look & Feel
+ 
+CSS can be added to hTML document in 3 different ways 
+1. Inline 
+    - used to style specific HTML element - Styke attribute 
+2. Internal 
+    - Style tag - Single page 
+3. External CSS 
+    - Seperate CSS File
+ 
+HTML Links - connection between two resources over the web
+ 
+Image tag - Used to display images - self closing tag
+ 
+Picture
+ 
+HTML list - isplay the list in the web page 
+- Place the data in a formatted manner
+ 
+3 types of lists 
+1. Ordered List 
+2. Unordered List 
+3. Description List
+ 
+HTML tables - rows and columns
+ 
+Block - will not begin in the same line 
+div, address, aside,
+ 
+Inline - can begin within the the same line of HTML element 
+    - <p>Visit our site <a> </a>
+ 
+HTML Iframes - Inline Frames used as an HTML doc to add another HTML doc 
+- some specific height and width in pixels
+ 
+Form - Collect some info about the user 
+<form> - Container for all the input elements
+ 
+method = post 
+method = get
+ 
+index.html?username=Deepika&&password=123456789
+
+HTML MEDIA - AUDIO TAG AND VIDEO TAG
+ 
+Canvas & SVG
+ 
+Canvas - Draw the Graphics - JavaScript
+moveTo() - Position of the cursor 
+lineTo() - Coordinates of the point and line 
+stroke() - make the line visible
+ 
+SVG - Scalable Vector Graphics
+ 
+HTML APis
+Geo location - 
+getCurrentPosition() - Curremnt position 
+watchPosition()
+ 
+Webstorage - Allow the web app to store data locally 
+        - key value pairs 
+        - Local Storage & Session Storage- Browser features
+ 
+Local storage - data is stored permanently until it is explicitly removed
+ 
+localstorage.setItem("data")
+ 
+localstorage.getItem()
+ 
+localstorage.removeItem()
+ 
+localstorage.clear()
+ 
+- Dark theme/ Light theme 
+- Remember language selection
+ 
+ 
+- Session Storage - store data only for current tab
+ 
+sessionStorage.setItem()
+ 
+------------------------------------------------------------------------------------
+CSS
+Cascading StyleSheet - Describe on how HTML Elements should be displayed on the browser 
+- Look & Feel, beautify 
+- Helps to create visually appealing wen pages as well as responsive web pages
+ 
+CSS Consists of 
+Selector - HTML Tag/ element 
+Property - the attribute that needs a change 
+value - each property will take a value
+ 
+selector{
+    property: value;
+}
+ 
+ 
+h1{
+    color: blue;
+}
+ 
+CSS can be applied in 3 ways 
+1. Inline CSS
+2. Internal CSS
+3. External CSS
+ 
+CSS Selectors  - Patterns used to select and style HTML Elements
+ 
+1. Element Selectors 
+2. ID Selector
+3. Class Selector 
+4. Universal Selector - * 
+5. Attribute Selector 
+6. Descendant Selector 
+7. Child Selector 
+8. Sibling Selector 
+9. Grouping Selector
+ 
+h1 - class demo
+p - class demo
+div - class demo
+ 
+.demo {
+    3 lines of code 
+}
+ 
+ 
+<div class="demo">
+<div>
+<p></p>
+</div>
+</div>
+ 
+<div class="demo1">
+<div>
+<p></p>
+</div>
+<div>
+ 
+ 
+<div>
+<p></p>
+<div>
+<p></p>
+</div>
+</div>
+ 
+p{
+ 
+}
+ 
+<div>
+<p></p>
+<p></p>
+<p></p>
+</div>

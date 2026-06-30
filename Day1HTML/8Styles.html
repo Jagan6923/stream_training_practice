@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Demonstration</title>
+  <link rel="stylesheet" href="./style/8Style.css" />
+
+  <style>
+    body {
+      background-color: beige;
+    }
+
+    .internal-style {
+      color: blueviolet;
+      text-align: center;
+    }
+
+    .box {
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Demonstration</h1>
+    <p>Inline CSS, internal CSS, and external CSS shown side by side so the cascade is easy to compare.</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Inline CSS</h2>
+      <p style="
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
+          ">
+        This text uses inline CSS.
+      </p>
+        <p>Inline CSS is useful for one-off styling, but it is harder to maintain.</p>
+    </section>
+
+    <section>
+      <h2>Internal CSS</h2>
+      <div class="internal-style">
+        <p>This paragraph is styled using internal CSS.</p>
+      </div>
+        <p>Internal CSS is good for a single page or a focused lesson example.</p>
+    </section>
+
+    <section>
+      <h2>External CSS</h2>
+      <div class="box">
+        <p>This box gets its base styling from the external stylesheet.</p>
+      </div>
+        <p>External CSS is best when multiple pages share the same base styles.</p>
+    </section>
+  </main>
+
+    <footer>
+      <p>Concepts covered: inline, internal, and external CSS with cascade order.</p>
+    </footer>
+</body>
+
+</html>

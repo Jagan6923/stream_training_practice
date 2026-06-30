@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Sizing: Border-Box Demonstration</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+
+      .box {
+        width: 300px;
+        padding: 20px;
+        border: 5px solid #4caf50;
+        margin: 50px auto;
+        background-color: #fff;
+        box-sizing: border-box;
+      }
+
+      .box-content {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 2px solid #ccc;
+      }
+
+      .info {
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .info p {
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Box Sizing: Border-Box Demonstration</h1>
+
+    <div class="box">
+      <div class="box-content">
+        <p>This box uses <strong>box-sizing: border-box;</strong></p>
+      </div>
+    </div>
+
+    <div class="info">
+      <p><strong>Width:</strong> 300px (including padding and border)</p>
+      <p><strong>Padding:</strong> 20px (inside the border)</p>
+      <p><strong>Border:</strong> 5px (solid, green)</p>
+      <p><strong>Margin:</strong> 20px (space outside the border)</p>
+    </div>
+  </body>
+</html>
+ 

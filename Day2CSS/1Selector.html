@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors DEmo</title>
+    <link rel="stylesheet" href="./1.Selector.css" />
+</head>
+
+<body>
+    <h1>CSS Selectors Demonstration</h1>
+
+    <!-- Element Selector  -->
+    <h2>Element Selector</h2>
+    <h5>This element is styled using Element selector</h5>
+
+    <!-- Class Selector -->
+    <h2>Class Selector</h2>
+    <p class="highlight">This element is styled using a class selector</p>
+    <p class="highlight">
+        This another element is also styled using a class selector
+    </p>
+    <p class="highlight">Third element is styled using a class selector</p>
+
+    <!-- ID Selector  -->
+    <h2>ID Selector</h2>
+    <p id="sampleid">This element is styled using ID Selector</p>
+
+    <!-- Attribute Selector -->
+    <h2>Attribute Selector</h2>
+    <a href="#" title="Hover over me!">This link is styles using attribute selector</a>
+
+    <!-- Descendant selector -->
+    <h2>Descendant selector</h2>
+    <div class="container">
+        <div>
+            <p>This paragraph is descendant of div with class container</p>
+        </div>
+    </div>
+
+    <!-- Child selector  -->
+    <h2>Child Selector</h2>
+    <div class="parent">
+        <p>This paragraph is the direct child of div with class parent</p>
+        <div>
+            <p>
+                This paragarph is descendant of div, so it wont get affetcted by child
+                selector
+            </p>
+        </div>
+    </div>
+
+    <!-- Sibling Selector -->
+    <div>
+        <h2>Sibling Selector</h2>
+        <p class="general-first">This paragraph is the first sibling</p>
+        <p>This paragraph is affected by the second sibling</p>
+        <p>This paragraph is also affected by the third sibling</p>
+    </div>
+
+    <!-- Adjacent sibling selector -->
+    <div>
+        <h2>Adjacent sibling selector</h2>
+        <p class="first">This paragraph is the first sibling</p>
+        <p class="second">This paragraph is affected by the second sibling</p>
+        <p class="second">This paragraph is not affected by the third sibling</p>
+    </div>
+
+    <!-- Grouping selector -->
+    <h2>Grouping selctor</h2>
+    <h3>This element is styled using Grouping selecetor</h3>
+    <h4>This element is styled using Grouping selecetor</h4>
+
+    <h2>Class Selector targetting specific element</h2>
+    <p class="important">This paragraph is styled using class important</p>
+    <div class="important">
+        This div is also styled using class important with different styles
+    </div>
+
+    <!--  Multiple classes to an element -->
+    <h2>Multiple classes to an element</h2>
+    <p class="message">This is an informational note</p>
+    <p class="message warning">This note shows a Warning</p>
+    <p class="warning">This wont get styled</p>
+
+    <!-- Pseudo-class Selector -->
+    <h2 >Pseudo-class Selector</h2>
+    <p>This is a normal paragraph</p>
+    <p class="hover-effect">Hover over me to see the effect</p>
+
+</body>
+
+</html>
