@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Position Property Demonstration</title>
+    <link rel="stylesheet" href="./8Position.css" />
+  </head>
+  <body>
+    <h1>CSS Position Property Demonstration</h1>
+
+    <section>
+      <h2>Static Position</h2>
+      <div class="static-box">This is a static positioned box.</div>
+      <p>
+        The static position is the default. Elements are positioned according to
+        the normal document flow.
+      </p>
+    </section>
+
+    <section>
+      <h2>Relative Position</h2>
+      <div class="relative-box">This box is relatively positioned.</div>
+      <p>
+        A relative positioned element is positioned relative to its normal
+        position. Moving it doesn't affect the layout of other elements.
+      </p>
+    </section>
+
+    <section>
+      <h2>Absolute Position</h2>
+      <div class="absolute-container">
+        <div class="absolute-box">This box is absolutely positioned.</div>
+      </div>
+      <p>
+        An absolutely positioned element is positioned relative to its nearest
+        positioned ancestor (other than static) or relative to the initial
+        containing block if none exist.
+      </p>
+    </section>
+
+    <section>
+      <h2>Fixed Position</h2>
+      <div class="fixed-box">This box is fixed positioned.</div>
+      <p>
+        A fixed positioned element is positioned relative to the browser window
+        and remains in the same place even when scrolling.
+      </p>
+    </section>
+
+    <section>
+      <h2>Sticky Position</h2>
+      <div class="sticky-container">
+        <div class="sticky-box">This box is sticky positioned.</div>
+      </div>
+      <p>
+        A sticky positioned element toggles between relative and fixed,
+        depending on the scroll position.
+      </p>
+    </section>
+  </body>
+</html>
+ 

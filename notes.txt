@@ -266,3 +266,68 @@ p{
 <p></p>
 <p></p>
 </div>
+
+
+
+CSS Background - used to add either color, image, etc 
+
+backgorund-color:
+ 
+CSS Tables 
+
+Add table properties - border, text-align, width & height
+ 
+CSS Position - static - default
+ 
+CSS Opacity - Control the transparency of any HTML element 
+
+values - 0.0 (fully opaque) to 1.0 (fully transparent)
+ 
+CSS Media Queries 
+
+- Responsive web designs 
+
+- Content is readable 
+
+max-width: 
+
+min-width :
+ 
+Media types - 
+
+all - Match all the media device types 
+
+print - used for printers 
+
+screen - mobile phones, tablets, computer screens 
+
+speech - screen readers
+ 
+
+ CSS Flexbox 
+display: flex
+ 
+<div style="display:flex">
+<div>
+<div>
+<div>
+</div>
+ 
+flex-start 
+flex-end 
+space-between 
+justify-content: center 
+flex-wrap - allow you to add items into multiple lines
+ 
+CSS Grid - Responsive layout - Rows and columns
+ 
+display:grid
+ 
+<div class="row">
+<div column 1>
+</div>
+ 
+grid-template-columns: auto auto auto auto;
+ 
+Difference between Grid and Flexbox 
+Layout - Flexbox -  1d , Grid - 2d 

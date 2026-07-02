@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0 50px;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        #contact input,
+        #contact textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .project h3 {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>My Profile Page</h1>
+    <header>
+        <h2>Jeyaraman</h2>
+        <p>Web Developer</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h2>Welcome to My Profile</h2>
+        <p>My name is Jeyaraman.</p>
+        <p>I am a web developer.</p>
+        <p>From Dindigul, Tamil Nadu</p>
+
+        <h3>Skills</h3>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+        </ul>
+
+        <h3>Learning Goals</h3>
+        <ol>
+            <li>Improve my front-end development skills.</li>
+            <li>Learn back-end development.</li>
+            <li>Build full-stack applications.</li>
+        </ol>
+
+    </section>
+    <section id="about">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>SecuroSphere – IAM & Web Security Platform</h3>
+            <a href="https://securosphere.vercel.app/">Link</a>
+        </div>
+        <ul>
+            <li>SecuroSphere – IAM & Web Security Platform Website Link
+            </li>
+            <li> Led the frontend team of 4 members and managed the UI design process.</li>
+            <li> Developed a fully responsive interface using React and Jotai.</li>
+            <li> Implemented secure authentication with OAuth, MFA, and JWT.</li>
+            <li>Integrated tools like Sentry, Hotjar, and Google Analytics for monitoring and user behavior analysis
+            </li>
+        </ul>
+        <div class="project">
+            <h3>Vinculo – E-Commerce Web Application </h3>
+            <a href="https://vinculo-mgdn.vercel.app/">Link</a>
+        </div>
+        <ul>
+            <li>Vinculo – E-Commerce Web Application Website Link</li>
+            <li> Collaborated with the backend team to integrate RESTful APIs for product management and user
+                authentication.</li>
+            <li> Designed and implemented a user-friendly interface using React and Redux.</li>
+            <li> Optimized the application for performance and scalability.</li>
+        </ul>
+        <div class="project">
+            <h3>Billzzy – Business Landing Page</h3>
+            <a href="https://tech-vaseegrah.vercel.app/">Link</a>
+        </div>
+        <ul>
+            <li>Billzzy – Business Landing Page Website Link</li>
+            <li> Designed and implemented a modern, responsive layout using React.</li>
+            <li> Integrated email marketing and lead capture forms.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <table>
+            <tr>
+                <th>Certification</th>
+                <th>Issuing Organization</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Responsive Web Design</td>
+                <td>Freecode camp</td>
+                <td>Oct 2024</td>
+            </tr>
+            <tr>
+                <td>Java Foundation Certification</td>
+                <td> Infosys Springboard</td>
+                <td>Aug 2024</td>
+            </tr>
+        </table>
+    </section>
+
+    <section>
+        <h2>My links</h2>
+        <ul>
+            <li><a href="https://github.com/Jagan6923">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jeyaraman23/">LinkedIn</a></li>
+            <li><a href="https://medium.com/@jaganjeyaraman">Medium</a></li>
+        </ul>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/tXHOdWJ-EYk?si=aCIOxatLWlXepYr3"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h4>My location</h4>
+
+        <button type="button" onclick="getLocation()">Get My Location</button>
+        <div id="location">
+            <p id="status">Click the button to request your current location.</p>
+            <p id="coords"></p>
+        </div>
+
+        <script>
+            function getLocation() {
+                const status = document.getElementById("status");
+                const coords = document.getElementById("coords");
+
+                if (!navigator.geolocation) {
+                    status.textContent = "Geolocation is not supported by your browser.";
+                    coords.textContent = "";
+                    return;
+                }
+
+                status.textContent = "Requesting your location...";
+                coords.textContent = "";
+
+                navigator.geolocation.getCurrentPosition(success, error);
+
+                function success(position) {
+                    const latitude = position.coords.latitude;
+                    const longitude = position.coords.longitude;
+
+                    status.textContent = "Location found";
+                    coords.textContent = `Latitude: ${latitude}, Longitude: ${longitude}`;
+                }
+
+                function error() {
+                    status.textContent = "Unable to retrieve your location.";
+                    coords.textContent = "Please check browser permissions and try again.";
+                }
+            }
+        </script>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+        <button type="submit" onclick="submitForm()">Submit</button>
+    </section>
+
+    <script>
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("email", email);
+            localStorage.setItem("message", message);
+            if (name && email && message) {
+                alert(`Thank you, ${name}! Your message has been submitted.`);
+                // Here you can add code to send the form data to a server if needed
+            } else {
+                alert("Please fill in all fields before submitting.");
+            }
+        }   
+    </script>
+
+    <canvas id="myCanvas" width="1400" height="200" style="border:1px solid #000000;">
+        
+    </canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const context = canvas.getContext("2d");
+
+        context.font = "24px Arial";
+        context.fillStyle = "#000000";
+        context.fillText("Jeyaraman", 650, 100);
+    </script>
+</body>
+
+</html>

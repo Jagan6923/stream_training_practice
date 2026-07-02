@@ -1,0 +1,93 @@
+body,
+h1,
+h2,
+p {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  line-height: 1.6;
+}
+
+h1,
+h2 {
+  margin-bottom: 15px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+/* Static Position */
+.static-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid #333;
+  padding: 10px;
+}
+
+/* Relative Position */
+.relative-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightgreen;
+  border: 1px solid #333;
+  padding: 10px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+/* Absolute Position */
+.absolute-container {
+  position: relative;
+  height: 200px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.absolute-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+  border: 1px solid #333;
+  padding: 10px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+}
+
+/* Fixed Position */
+.fixed-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightgoldenrodyellow;
+  border: 1px solid #333;
+  padding: 10px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Sticky Position */
+.sticky-container {
+  height: 800px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-top: 50px;
+}
+
+.sticky-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightpink;
+  border: 1px solid #333;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+ 
