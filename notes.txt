@@ -331,3 +331,136 @@ grid-template-columns: auto auto auto auto;
  
 Difference between Grid and Flexbox 
 Layout - Flexbox -  1d , Grid - 2d 
+
+
+---------------------------------------------------------------
+JavaScript
+- Add the behaviour to the web page 
+- Provides Interactivity and responsiveness to the web page 
+- Responds to the events 
+- Dynamic behaviour - content dynamically - DOM API - Manipulate HTML & CSS content and styles 
+- Versatile programming language - Client and server
+ 
+ECMAScript Standards 
+ECMA - European Computer Manufacture Association
+ 
+JS Developer - Feature A - Published - Support in some  platforms - Chrome - not in Edge 
+Developers - Feature A in project - Edge - Will not work as expected
+ 
+ECMA Standards - Ensure interoperability of JS features across different browsers / platforms
+ 
+ECMAScript - Standard defines js language
+ 
+ES1 
+ES2
+ES6 - 2015 - Major features
+ 
+NodeJS - Server run time environment allow you to execute JS Code
+ 
+Each browser has a default JS Engine 
+Chrome - V8 
+Edge - Spider Monkey 
+Chakra, JS Core
+ 
+NodeJS - Copy of JS Engine from chrome - V8  
+ 
+command - node filename.js
+ 
+Variables 
+- Container to store the data 
+-  var, let and const
+ 
+SCOPE - To what extent the variable can be accessed 
+- 2 types 
+1. Global Scope 
+    - declare the var in the main progrm 
+    - Accessed everywhere
+ 
+    var name = "xyz" // Global scoped
+ 
+    function getVar(){
+        access var 
+        o/p - xyz 
+    }
+ 
+    if(){
+        name --- xyz
+    }
+ 
+2. Local Scope
+    - Functional scope - var
+ 
+        function (){
+            var lname = "abc"
+        }
+ 
+        if(){
+            var fname = ""
+        }
+ 
+        lname ----- Error 
+        fname = "" ---- result
+ 
+    - Block scope - Let & const 
+    Block - {
+        ---- code 
+    }
+ 
+    function(){
+        let mobile
+    }
+ 
+    mobile - error
+ 
+    if(){
+        var phone = ""
+        let mobile = ""
+    }else{
+        phone --- accessed 
+        mobile - Error
+ 
+        let mobile = ""
+        mobile - access 
+    }
+ 
+    mobile - error
+ 
+let mobile = ""
+    for(){
+ 
+    }
+ 
+Hoisting - Accessing the variables/ functions before they are actually initialised
+ 
+Operators 
+- Arithemetic 
+- Relational 
+- Logical 
+- Assignment 
+- Bitwise 
+- Special operators
+ 
+Data types 
+var a = 10
+ 
+var a = "abc"
+ 
+Primiitve data types
+    Number
+    String 
+    Boolean
+    Undefined 
+    Null
+    BigInt 
+    Symbol
+ 
+Non primitive data types 
+    Object 
+    Arrays 
+    Functions 
+    Date 
+    RegExp
+ 
+Type conversion - Converting dta from one data type to another 
+    Explicit type conversion 
+    Implicit
