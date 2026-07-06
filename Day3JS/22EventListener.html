@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Listener</title>
+  </head>
+  <body>
+    <h1>Mouse over the button</h1>
+    <button id="btn">Hover me</button>
+
+    <script>
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener("mouseover", () => {
+        btn.style.background = "lightpink";
+      });
+
+      btn.addEventListener("mouseout", () => {
+        btn.style.background = "aqua";
+      });
+
+      btn.addEventListener("click", () => {
+        alert("hiii");
+      });
+    </script>
+  </body>
+</html>
+ 

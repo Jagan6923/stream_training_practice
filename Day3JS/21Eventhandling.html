@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling Methods</title>
+  </head>
+  <body>
+    <button onclick="clickHere()">CLICK HERE</button>
+    <b>Enter Username: </b>
+    <input
+      type="text"
+      placeholder="Enter Username"
+      id="text"
+      onfocus="onFocusFunc()"
+      onblur="onBlurFunc()"
+    />
+
+    <script>
+      function clickHere() {
+        alert("You have clicked on the button - CLICK HERE ");
+      }
+
+      function onFocusFunc() {
+        document.getElementById("text").style.background = "lightblue";
+      }
+
+      function onBlurFunc() {
+        let text = document.getElementById("text");
+        text.value = text.value.toUpperCase();
+      }
+    </script>
+  </body>
+</html>
+ 

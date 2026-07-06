@@ -464,3 +464,245 @@ Non primitive data types
 Type conversion - Converting dta from one data type to another 
     Explicit type conversion 
     Implicit
+ 
+Control structure
+    - Conditional statements 
+        - if 
+        - if else 
+        - if - else - if 
+        - Nested if 
+        - Switch
+ 
+    - Looping statements 
+        - for, while, do while, foreach, for in, for of
+ 
+    - Control Flow statements 
+        - break, continue
+ 
+Arrays -
+- Types of objects which allows you to store multiple values into single variable 
+- Vlaues can be of any data type
+ 
+Literal notation 
+let users = ["Rohit" , "Rahul"]
+ 
+Constructor 
+let user = new Array("Rohit", "Rahul")
+ 
+users[0]
+ 
+Modify the elements 
+users[1] = "Virat"
+ 
+Functions - Block of code used to perform specific taks 
+        - REturn value, array, object, function , - undefined 
+    - Reduce repitition of code
+    - Reusability 
+    - Modularity  
+ 
+In JS, functions can be defined in 3 ways 
+1. Function statement 
+2. Function Expression 
+3. Arrow functions - ES6
+ 
+Mathemtical Expression - a =  b + c
+ 
+JS is synchronous single thraeded programming language
+- Perform asynchronous operatiosn
+ 
+Destrucuring - Arrays and objects
+ 
+Rest & Spread operatiors 
+- Denoted by ...
+- Arrays & objects
+ 
+let number = [10,20,30,40,50,60]
+ 
+output - [20,40,60,80,100,120]
+ 
+Map - Iterate through the list & based on the condition - desired output as a new array
+ 
+output - [10,20,30, 40,60]
+ 
+Filter - Iterate thrugh the list - remove the values from the array
+ 
+Objects 
+- Real time entity - Collection of properties and methods 
+- Key: value pairs
+ 
+const students = [
+  { id: 1, name: "Rahul", marks: 85, city: "Hyderabad" },
+  { id: 2, name: "Priya", marks: 45, city: "Chennai" },
+  { id: 3, name: "Kiran", marks: 90, city: "Hyderabad" },
+  { id: 4, name: "Sneha", marks: 35, city: "Bangalore" }
+];
+ 
+- Print only student names 
+- print students who have scored marks > 50 
+- Add 5 grace marks to every student 
+- Count how many students passed ---- > 40 
+- Print only Hyderabd students
+- Find the topper 
+- Find average marks 
+- Print all student details - Foreach
+ 
+Class - Blue print for craeting objects 
+Template
+ 
+Vehicle - Engine , Speed , Tiers , etc
+ 
+Obj - Instance of class
+ 
+Car 
+Bike
+ 
+class classname {
+    constructor(){
+        ---- Initialise the properties 
+    }
+ 
+    method1(){
+ 
+    }
+ 
+    method2(){
+ 
+    }
+}
+ 
+let obj1 = new classname()
+ 
+Class Inheritance - child class inherits properties and methods from parent class - extends
+ 
+STATIC METHODS 
+    - Defined on the class itself, not on the instance of class 
+    - Utility functions
+ 
+--- private fileds and methods  ---- #
+ 
+MODULES 
+FILE - three functions/ variables - export 
+File 2 - import - use those functions
+ 
+Import & Export 
+- .mjs ----- Module JS
+ 
+1. Default Export / Import 
+2. Named Export / import
+ 
+EXCEPTION HANDLING
+ 
+TRY - code which needs to be checked 
+CATCH - Hanlde Errors 
+THROW - Control your error messages
+FINALLY - this is always executed
+ 
+JSON - Javascript Object Notation - 
+{
+    "name": "",
+ 
+}
+ 
+EVENT HANDLING & EVENT LISTENERS 
+Event Handling 
+    - Key to make web page interactive 
+    - Allow our code to respond to events like click, mouse event, key press, focus, blur, etc
+ 
+    - onClick - Handle the click event 
+    - onFocus - focus the input filed 
+    - onBlur - Freee the data , validation 
+    - onSubmit - submit the form 
+    - onChange - handle the text 
+    onMouseEnter, etc
+ 
+Event Listeners 
+    - Functions that waits for specific event to happen - click, mouse event, key press, focus, blur, etc
+ 
+    document.addEventListener()
+ 
+ASYNCHRONOUS PROGRAMMING
+ 
+JS iS synchronous Single thraeded lnguage 
+- Synchronous - Code in sequence 
+Single threaded - one line at a time
+ 
+asynchronous - Allow the code to run concurrently without blokcing the main thread
+ 
+- File raedings 
+- Network request 
+- Timers
+ 
+- JS enable us to handle asynchronous programming
+- Enhaces application performace
+ 
+SYNCHRONOUS 
+Line 1 - 1 sec - 1
+Line 2 - 8 sec - 9 --- promises 
+Line 3 - 5 sec - 14 --- set time out 
+line 4 - 4 sec - 18
+line 5 - 2 sec - 20
+ 
+-- Time consuming process
+ 
+ASYNCHRONOUS 
+Call stack - code is executed - Functions pushed into stack - popped off from the stack 
+- Web APIS - handed off to the call back queue 
+Event loop 
+Call back queue - When Web API completes its task , it will be pushed into call back queue
+ 
+CALL STACK 
+Line 1 - 1 sec - removed 
+Line 5 - removed 
+Line 4 - removed
+ 
+Line 1 , Line 5 , Line 4, Line 3, Line 2
+ 
+CALLBACKS 
+    - Function which takes another function as an argument and it is called ack when it is required
+ 
+PROMISES 
+    - Special object in JavaScript
+    - Used to Handle asynchronous operatios 
+    - It represent a value which is present now, later or never
+ 
+- 3 STATES 
+- PEDNING  - Initial state 
+- FULFILLED - operation sis completed - Resolved 
+- REJECTED - Operation failed
+ 
+- Craete a promise 
+- make use of promise
+ 
+ASYNC / AWAIT 
+- Syntctic sugar to the promise
+ 
+ASYNC 
+    - Handle asynchronous ina more cleaner way 
+    - Code will look like sync code 
+    - Return a promise
+ 
+AWAIT 
+    - pause the code until the promise is resolved
+ 
+    CONNECT
+ 
+async function(){
+  try{
+     await connect()
+     await save()
+    --- data is saved --- response 
+  }catch(err) {
+  }
+}
+ 
+promise.then(() =< {
+    connect.the(() => {
+        save the data 
+    }).catch((err) => {
+        error in saving data 
+    })
+}).catch(() => {
+    connection error 
+})
+ 
+---lines of code wull b executed
