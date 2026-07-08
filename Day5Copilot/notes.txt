@@ -1,0 +1,165 @@
+Copilot
+ 
+- Before chatGPT & Copilot 
+    - Google/ Browsers 
+    - Stack Overflow 
+    - Senior DEveloper 
+    - Youtube 
+    - Documentation
+ 
+Developer 
+Problem 
+Google 
+Stacj Overflow 
+Documentation 
+Write Code
+ 
+Now,
+ 
+Developer 
+Describe Requirement 
+Github Copilot 
+Suggested code 
+Debeloper Review 
+Final code  
+ 
+function add(a,b)
+{
+    return a + b
+}
+ 
+const users = 
+they predict 
+const users = []
+ 
+Assistant - AI
+ 
+What is AI ? 
+- Artificial Intelligence is the ability of machines or softwares to perform tasks - manually require human intelligence
+ 
+Human Intelligence 
+    Think 
+    Learn 
+    speak 
+    Read 
+    Listen 
+    write
+ 
+AI 
+- Software perform similar tasks
+ 
+AI 
+Machine learning 
+Deep Learning 
+Generative AI 
+LLMs 
+Github Copilot
+ 
+Machine Learning 
+    - Subset Of AI 
+    - Computers learn[patterns from data 
+    2 + 3 = 5
+ 
+- Input + output -> Machine learn rules
+ 
+Deep Learning 
+- ML uses algorithms 
+- Uses Artifical Neural Networks - Human brain
+ 
+Input 
+Neurons 
+Neurons 
+Neurons 
+Output
+ 
+Geenrative AI 
+    - chatGPT
+    - Github Copilot 
+    Image generators 
+    - Coding assistants
+ 
+Traditional AI 
+Predict 
+classify 
+Recognise
+ 
+Gen AI 
+Creates 
+Text, Images, Code, Music, Videos
+ 
+LLMs 
+- Read billions of sentences 
+- Learned - How langauge works 
+- Trained - Trained model - Large Language Model
+ 
+Books, artciles, webites, wikipedia, research paers, source code, 
+Training 
+LLM 
+Question 
+Answer
+ 
+Tokens
+ 
+Context window - What AI remembers as conteext  
+ 
+Prompt 
+The instruction taht you give to SI
+ 
+CREATE CODE ---- BAD PROMPT  
+ 
+GOOD PROMPT 
+Create a responsive react login page using functional component with email, password validation and tailwind CSS  
+ 
+Better Prompt 
+Create a responsive react login page using functional component
+Include email and password fields 
+Validate empty inputs 
+Display error messages 
+use Tailwind CSS 
+Add a submit Button 
+use useState
+ 
+Better prompt - better result
+ 
+setfirst()
+ 
+GitHub Copilot 
+AI 
+ML 
+DL 
+GEN AI 
+LLM 
+GITHUB COPILOT - An application which is powered by LLM 
+CODE
+ 
+GitHub Copilot work 
+Developer 
+Write comment 
+VS Code 
+GitHub Copilto Extension 
+AI Model 
+Suggestion 
+Developer Review 
+Accept/ Reject 
+Finaal code
+ 
+ctrl + alt + i
+ 
+Best Practices 
+- Review code 
+- Boiler plate codes 
+- Prompts - specific 
+- Junior developer/ intern 
+- templates for code generation
+ 
+10.3 million users
+ 
+Advanatages 
+- faster to 55% - Github research 
+- 74% of developers report increased focus
+ 
+Limitations 
+- AI responsibly - Problem 
+- Halucinate 
+- Bad results 
+- Provide any sensitive info 

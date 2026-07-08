@@ -1,0 +1,42 @@
+:root {
+  --bg-1: #fff8f1;
+  --bg-2: #e8f3ff;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #dbe2ea;
+  --brand: #0f766e;
+  --brand-dark: #115e59;
+  --danger: #be123c;
+  --danger-dark: #9f1239;
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --shadow-lg: 0 20px 48px rgba(15, 23, 42, 0.14);
+  --shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.08);
+
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  padding: 1.5rem;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 15% 12%, rgba(255, 190, 92, 0.25), transparent 30%),
+    radial-gradient(circle at 85% 88%, rgba(56, 189, 248, 0.22), transparent 34%),
+    linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%);
+  color: var(--text);
+}

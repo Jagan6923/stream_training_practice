@@ -1,53 +1,86 @@
 3 Core Technologies 
+
 1. HTML
+
 2. CSS 
+
 3. JavaScript
  
 HTML 
+
 - Hyper Text Markup Language 
+
 - Define/ Create the structure of a web page 
+
 - Made up of HTML Tags & Elements
  
  
 HTML Agebda 
+
 - Introduction to HTML 
+
 - HTML Elements & Attribututes 
+
 - HTML Semantics 
+
 - HTML Styles & CSS 
+
 - HTML Links
+
 - Images 
+
 - Lists 
+
 - Table 
+
 - Classes & ID 
+
 - IFrames 
+
 - Responsive 
+
 - Forms 
+
 - Media 
+
 - Canvas & SVG 
+
 - HTML APis
  
 HTML 5 ------ 5th version of HTML ------ present the content for the web
  
 Developed by 2 groups 
+
 - W3C - World Wide web Consortium 
+
 - WHATWG - Web Hypertext Application Technology Working Group
  
 Features 
+
 1. Simple 
+
 2. New semantic Elements - Improves accessibility and SEO 
+
 3. Platform Independant 
+
 4. Audio & Video support 
+
 5 Readable 
+
 6. Flexible 
+
 7. Linkable
  
 IDE 
+
 - VS CODE
  
 - C://lkm_trainings/project_29thjune2026_ases/index.html
  
 HTML Tags - < > -- headings, paragraphs, forms, tables, a, image 
+
 HTML Elememt - Starting from the opening tag till the closing tag 
+
 - An HTML Tag with attribute and content is called an HTML Element
  
 <p>This is a para </p>
@@ -57,21 +90,31 @@ Extension - .html
 Meta tags - Define baout the meta data about the web page
  
 Attributes 
+
 - Provide some additional info about the tag 
+
 - <img src="path of the image" alt="alt text" />
+
 - class, id , name, type, maxlength, minlength
  
 <p id="demo">
  
 #demo{
+
     color: red;
+
     backgorund-color: blue;
+
 }
  
 #two{
+
         color: red;
+
     backgorund-color: blue;
+
     font-size: 18px
+
 }
  
 <p id = "demo">
@@ -79,15 +122,20 @@ Attributes
 <p class="sample">
  
 .sample{
+
     color: yellow;
+
     backgorund-color: red;
+
 }
  
 JS - <script>
+
     - JS Code 
 </script>
  
 Semantic Tags - Clear meaning to the browser and developer 
+
     Ex: aside, header, footer, image, main, nav, article
  
 Non Sematic tags - Div and span tags - Tell nothing about its content 
@@ -96,28 +144,41 @@ Non Sematic tags - Div and span tags - Tell nothing about its content
 <div class="aside">
  
 Header 
+
 Nav links ----Home About Services Contact Sign Up Blog
  
 Main
  
     article 
+
                                                 facebook 
+
                                                 Instagram 
+
     Section 
+
         Artcile 1 
+
         Artcile 2
  
 Footer
  
 CSS - Cascading Style sheet - Style the web Application
+
     - Look & Feel
  
 CSS can be added to hTML document in 3 different ways 
+
 1. Inline 
+
     - used to style specific HTML element - Styke attribute 
+
 2. Internal 
+
     - Style tag - Single page 
+
 3. External CSS 
+
     - Seperate CSS File
  
 HTML Links - connection between two resources over the web
@@ -126,51 +187,67 @@ Image tag - Used to display images - self closing tag
  
 Picture
  
-HTML list - isplay the list in the web page 
+HTML list - isplay the list in the web p[age 
+
 - Place the data in a formatted manner
  
 3 types of lists 
+
 1. Ordered List 
+
 2. Unordered List 
+
 3. Description List
  
 HTML tables - rows and columns
  
 Block - will not begin in the same line 
+
 div, address, aside,
  
 Inline - can begin within the the same line of HTML element 
+
     - <p>Visit our site <a> </a>
  
 HTML Iframes - Inline Frames used as an HTML doc to add another HTML doc 
+
 - some specific height and width in pixels
  
 Form - Collect some info about the user 
 <form> - Container for all the input elements
  
 method = post 
+
 method = get
  
 index.html?username=Deepika&&password=123456789
-
+ 
 HTML MEDIA - AUDIO TAG AND VIDEO TAG
  
 Canvas & SVG
  
 Canvas - Draw the Graphics - JavaScript
+
 moveTo() - Position of the cursor 
+
 lineTo() - Coordinates of the point and line 
+
 stroke() - make the line visible
  
 SVG - Scalable Vector Graphics
  
 HTML APis
+
 Geo location - 
+
 getCurrentPosition() - Curremnt position 
+
 watchPosition()
  
 Webstorage - Allow the web app to store data locally 
+
         - key value pairs 
+
         - Local Storage & Session Storage- Browser features
  
 Local storage - data is stored permanently until it is explicitly removed
@@ -184,6 +261,7 @@ localstorage.removeItem()
 localstorage.clear()
  
 - Dark theme/ Light theme 
+
 - Remember language selection
  
  
@@ -192,48 +270,74 @@ localstorage.clear()
 sessionStorage.setItem()
  
 ------------------------------------------------------------------------------------
+
 CSS
+
 Cascading StyleSheet - Describe on how HTML Elements should be displayed on the browser 
+
 - Look & Feel, beautify 
+
 - Helps to create visually appealing wen pages as well as responsive web pages
  
 CSS Consists of 
+
 Selector - HTML Tag/ element 
+
 Property - the attribute that needs a change 
+
 value - each property will take a value
  
 selector{
+
     property: value;
+
 }
  
  
 h1{
+
     color: blue;
+
 }
  
 CSS can be applied in 3 ways 
+
 1. Inline CSS
+
 2. Internal CSS
+
 3. External CSS
  
 CSS Selectors  - Patterns used to select and style HTML Elements
  
 1. Element Selectors 
+
 2. ID Selector
+
 3. Class Selector 
+
 4. Universal Selector - * 
+
 5. Attribute Selector 
+
 6. Descendant Selector 
+
 7. Child Selector 
+
 8. Sibling Selector 
+
 9. Grouping Selector
  
 h1 - class demo
+
 p - class demo
+
 div - class demo
  
 .demo {
+
     3 lines of code 
+
 }
  
  
@@ -266,9 +370,104 @@ p{
 <p></p>
 <p></p>
 </div>
+ 
+Margin and padding 
 
+Margin - Create the space outside the border of an element
+ 
+Margin-top 
 
+margin-bottom
 
+margin-left
+
+margin-right
+ 
+margin-collapse - Bottom and top margins of adjacent elements gets collapsed into single margin
+ 
+<h1 margin bottom>
+<p margin top >
+ 
+margin : 0 0 50 70 ----- top right bottom left
+ 
+margin: 20px ----------- All the sides 
+
+Two values - margin : 10px 20ppx ------ 10px top and bottom, 20px for right and left
+ 
+3 values - margin: 10px 20px 30px ----- 10px for top , 20px for left and righ, 30px for bottom
+ 
+Padding - Space between content and border
+ 
+This is heading
+ 
+padding: 20px ---- all the sides
+ 
+Height & width property 
+
+- Control the size of elements
+ 
+- Width - set the width - horizontal space 
+
+- Height - set the height - Vertical space
+ 
+pixels - Fixed size
+ 
+fixed{
+
+    height: 50px;
+
+    width: 100px;
+
+}
+ 
+percentage{
+
+    height: 50%;
+
+    width: 80%;
+
+}
+ 
+vw and vh - Relative to the viewport size
+ 
+ems & rems - relative to the font sie , root size
+ 
+CSS BOX Model - Box that wraps around every HTML element 
+
+    - margin, border, padding, content  
+ 
+    div{
+
+        margin: 
+
+        padding:
+
+        border: 
+
+        width:  
+
+    }
+ 
+Total width = width + left border + right border + left padding + right padding
+ 
+Totl height = height + top border + bottom border + top padding + bottom padding
+ 
+CSS Display property 
+
+- Block - div, p, h1, aside 
+
+- Inline - span, a
+ 
+display: inline - display multiple block level elements in a line
+ 
+display: block - Display element as a block
+ 
+inline-block - Same as inline - not start in a new line . but height and width are considered  
+ 
+display: none - Hide the element
+ 
+CSS Fonst/ Texts - color, decoration, transform
+ 
 CSS Background - used to add either color, image, etc 
 
 backgorund-color:
@@ -303,8 +502,8 @@ screen - mobile phones, tablets, computer screens
 
 speech - screen readers
  
+CSS Flexbox 
 
- CSS Flexbox 
 display: flex
  
 <div style="display:flex">
@@ -314,9 +513,13 @@ display: flex
 </div>
  
 flex-start 
+
 flex-end 
+
 space-between 
+
 justify-content: center 
+
 flex-wrap - allow you to add items into multiple lines
  
 CSS Grid - Responsive layout - Rows and columns
@@ -330,21 +533,29 @@ display:grid
 grid-template-columns: auto auto auto auto;
  
 Difference between Grid and Flexbox 
-Layout - Flexbox -  1d , Grid - 2d 
 
-
+Layout - Flexbox -  1d , Grid - 2d
+ 
 ---------------------------------------------------------------
+
 JavaScript
+
 - Add the behaviour to the web page 
+
 - Provides Interactivity and responsiveness to the web page 
+
 - Responds to the events 
+
 - Dynamic behaviour - content dynamically - DOM API - Manipulate HTML & CSS content and styles 
+
 - Versatile programming language - Client and server
  
 ECMAScript Standards 
+
 ECMA - European Computer Manufacture Association
  
 JS Developer - Feature A - Published - Support in some  platforms - Chrome - not in Edge 
+
 Developers - Feature A in project - Edge - Will not work as expected
  
 ECMA Standards - Ensure interoperability of JS features across different browsers / platforms
@@ -352,14 +563,19 @@ ECMA Standards - Ensure interoperability of JS features across different browser
 ECMAScript - Standard defines js language
  
 ES1 
+
 ES2
+
 ES6 - 2015 - Major features
  
 NodeJS - Server run time environment allow you to execute JS Code
  
 Each browser has a default JS Engine 
+
 Chrome - V8 
+
 Edge - Spider Monkey 
+
 Chakra, JS Core
  
 NodeJS - Copy of JS Engine from chrome - V8  
@@ -367,65 +583,95 @@ NodeJS - Copy of JS Engine from chrome - V8
 command - node filename.js
  
 Variables 
+
 - Container to store the data 
+
 -  var, let and const
  
 SCOPE - To what extent the variable can be accessed 
+
 - 2 types 
+
 1. Global Scope 
+
     - declare the var in the main progrm 
+
     - Accessed everywhere
  
     var name = "xyz" // Global scoped
  
     function getVar(){
+
         access var 
+
         o/p - xyz 
+
     }
  
     if(){
+
         name --- xyz
+
     }
  
 2. Local Scope
+
     - Functional scope - var
  
         function (){
+
             var lname = "abc"
+
         }
  
         if(){
+
             var fname = ""
+
         }
  
         lname ----- Error 
+
         fname = "" ---- result
  
     - Block scope - Let & const 
+
     Block - {
+
         ---- code 
+
     }
  
     function(){
+
         let mobile
+
     }
  
     mobile - error
  
     if(){
+
         var phone = ""
+
         let mobile = ""
+
     }else{
+
         phone --- accessed 
+
         mobile - Error
  
         let mobile = ""
+
         mobile - access 
+
     }
  
     mobile - error
  
 let mobile = ""
+
     for(){
  
     }
@@ -433,87 +679,131 @@ let mobile = ""
 Hoisting - Accessing the variables/ functions before they are actually initialised
  
 Operators 
+
 - Arithemetic 
+
 - Relational 
+
 - Logical 
+
 - Assignment 
+
 - Bitwise 
+
 - Special operators
  
 Data types 
+
 var a = 10
  
 var a = "abc"
  
 Primiitve data types
+
     Number
+
     String 
+
     Boolean
+
     Undefined 
+
     Null
+
     BigInt 
+
     Symbol
  
 Non primitive data types 
+
     Object 
+
     Arrays 
+
     Functions 
+
     Date 
+
     RegExp
  
 Type conversion - Converting dta from one data type to another 
+
     Explicit type conversion 
+
     Implicit
  
 Control structure
+
     - Conditional statements 
+
         - if 
+
         - if else 
+
         - if - else - if 
+
         - Nested if 
+
         - Switch
  
     - Looping statements 
+
         - for, while, do while, foreach, for in, for of
  
     - Control Flow statements 
+
         - break, continue
  
 Arrays -
+
 - Types of objects which allows you to store multiple values into single variable 
+
 - Vlaues can be of any data type
  
 Literal notation 
+
 let users = ["Rohit" , "Rahul"]
  
 Constructor 
+
 let user = new Array("Rohit", "Rahul")
  
 users[0]
  
 Modify the elements 
+
 users[1] = "Virat"
  
 Functions - Block of code used to perform specific taks 
+
         - REturn value, array, object, function , - undefined 
+
     - Reduce repitition of code
+
     - Reusability 
+
     - Modularity  
  
 In JS, functions can be defined in 3 ways 
+
 1. Function statement 
+
 2. Function Expression 
+
 3. Arrow functions - ES6
  
 Mathemtical Expression - a =  b + c
  
 JS is synchronous single thraeded programming language
+
 - Perform asynchronous operatiosn
  
 Destrucuring - Arrays and objects
  
 Rest & Spread operatiors 
+
 - Denoted by ...
+
 - Arrays & objects
  
 let number = [10,20,30,40,50,60]
@@ -527,26 +817,41 @@ output - [10,20,30, 40,60]
 Filter - Iterate thrugh the list - remove the values from the array
  
 Objects 
+
 - Real time entity - Collection of properties and methods 
+
 - Key: value pairs
  
 const students = [
+
   { id: 1, name: "Rahul", marks: 85, city: "Hyderabad" },
+
   { id: 2, name: "Priya", marks: 45, city: "Chennai" },
+
   { id: 3, name: "Kiran", marks: 90, city: "Hyderabad" },
+
   { id: 4, name: "Sneha", marks: 35, city: "Bangalore" }
+
 ];
  
 - Print only student names 
+
 - print students who have scored marks > 50 
+
 - Add 5 grace marks to every student 
+
 - Count how many students passed ---- > 40 
+
 - Print only Hyderabd students
+
 - Find the topper 
+
 - Find average marks 
+
 - Print all student details - Foreach
  
 Class - Blue print for craeting objects 
+
 Template
  
 Vehicle - Engine , Speed , Tiers , etc
@@ -554,11 +859,15 @@ Vehicle - Engine , Speed , Tiers , etc
 Obj - Instance of class
  
 Car 
+
 Bike
  
 class classname {
+
     constructor(){
+
         ---- Initialise the properties 
+
     }
  
     method1(){
@@ -568,6 +877,7 @@ class classname {
     method2(){
  
     }
+
 }
  
 let obj1 = new classname()
@@ -575,47 +885,67 @@ let obj1 = new classname()
 Class Inheritance - child class inherits properties and methods from parent class - extends
  
 STATIC METHODS 
+
     - Defined on the class itself, not on the instance of class 
+
     - Utility functions
  
 --- private fileds and methods  ---- #
  
 MODULES 
+
 FILE - three functions/ variables - export 
+
 File 2 - import - use those functions
  
 Import & Export 
+
 - .mjs ----- Module JS
  
 1. Default Export / Import 
+
 2. Named Export / import
  
 EXCEPTION HANDLING
  
 TRY - code which needs to be checked 
+
 CATCH - Hanlde Errors 
+
 THROW - Control your error messages
+
 FINALLY - this is always executed
  
 JSON - Javascript Object Notation - 
+
 {
+
     "name": "",
  
 }
  
 EVENT HANDLING & EVENT LISTENERS 
+
 Event Handling 
+
     - Key to make web page interactive 
+
     - Allow our code to respond to events like click, mouse event, key press, focus, blur, etc
  
     - onClick - Handle the click event 
+
     - onFocus - focus the input filed 
+
     - onBlur - Freee the data , validation 
+
     - onSubmit - submit the form 
+
     - onChange - handle the text 
+
     onMouseEnter, etc
  
 Event Listeners 
+
     - Functions that waits for specific event to happen - click, mouse event, key press, focus, blur, etc
  
     document.addEventListener()
@@ -623,86 +953,516 @@ Event Listeners
 ASYNCHRONOUS PROGRAMMING
  
 JS iS synchronous Single thraeded lnguage 
+
 - Synchronous - Code in sequence 
+
 Single threaded - one line at a time
  
 asynchronous - Allow the code to run concurrently without blokcing the main thread
  
 - File raedings 
+
 - Network request 
+
 - Timers
  
 - JS enable us to handle asynchronous programming
+
 - Enhaces application performace
  
 SYNCHRONOUS 
+
 Line 1 - 1 sec - 1
+
 Line 2 - 8 sec - 9 --- promises 
+
 Line 3 - 5 sec - 14 --- set time out 
+
 line 4 - 4 sec - 18
+
 line 5 - 2 sec - 20
  
 -- Time consuming process
  
 ASYNCHRONOUS 
+
 Call stack - code is executed - Functions pushed into stack - popped off from the stack 
+
 - Web APIS - handed off to the call back queue 
+
 Event loop 
+
 Call back queue - When Web API completes its task , it will be pushed into call back queue
  
 CALL STACK 
+
 Line 1 - 1 sec - removed 
+
 Line 5 - removed 
+
 Line 4 - removed
  
 Line 1 , Line 5 , Line 4, Line 3, Line 2
  
 CALLBACKS 
+
     - Function which takes another function as an argument and it is called ack when it is required
  
 PROMISES 
+
     - Special object in JavaScript
+
     - Used to Handle asynchronous operatios 
+
     - It represent a value which is present now, later or never
  
 - 3 STATES 
+
 - PEDNING  - Initial state 
+
 - FULFILLED - operation sis completed - Resolved 
+
 - REJECTED - Operation failed
  
 - Craete a promise 
+
 - make use of promise
  
 ASYNC / AWAIT 
+
 - Syntctic sugar to the promise
  
 ASYNC 
+
     - Handle asynchronous ina more cleaner way 
+
     - Code will look like sync code 
+
     - Return a promise
  
 AWAIT 
+
     - pause the code until the promise is resolved
  
     CONNECT
  
 async function(){
+
   try{
+
      await connect()
+
      await save()
+
     --- data is saved --- response 
+
   }catch(err) {
+
   }
+
 }
  
 promise.then(() =< {
+
     connect.the(() => {
+
         save the data 
+
     }).catch((err) => {
+
         error in saving data 
+
     })
+
 }).catch(() => {
+
     connection error 
+
 })
  
 ---lines of code wull b executed
+ 
+-------------------------------------------------------------
+
+RWD - Responsive Web Design
+ 
+- Adapted with all devices 
+
+- User have seamless interaction and engaging experence
+ 
+- Media Queries
+
+- Images 
+
+- Typography - ems rems 
+
+- View port 
+
+    - Visible area of web page on a device 
+
+    - Understand and configure view port - Create RWD 
+
+    - <meta name="viewport" device="devoce-width" />
+
+    - Device-width = Set viewport width to match device  size / screen width 
+
+    - initial-scale = 1.0 
+
+    - Rules 
+
+        - Avoid fixed wudths 
+
+        - Specific width 
+
+        - Media Queries
+ 
+Benifits 
+
+- Improve User Experience 
+
+- Enhanced SEO 
+
+- Improve cost
+ 
+@media (condition){
+ 
+}
+ 
+Bootstrap 
+
+- Framework which is used to style the web apps 
+
+- Collection of CSS & JS tools 
+
+- Styles, components, and grid systems
+ 
+- Faster development 
+
+- Browser support 
+
+- Maintainalbility  
+ 
+- Template - Forms, Buttons, Typographs , Navbar
+ 
+<button class="sample">Svae</button>
+ 
+In CSS 
+
+.sample{
+
+    color: "white",
+
+    backgrpund-color: "blue",
+
+    padding: 5px,
+
+    border-radius: 5px,
+
+    cursor: pointer 
+
+}
+ 
+In Bootstrap, 
+<button class = "btn btn-primary"></button
+ 
+Bootstrap can be defined in 2 ways 
+
+1. Downloading the folder & integrate in project 
+
+2. Use CDN links
+ 
+Bootstrap Grid system
+ 
+Extra small - xs - Mobile phones 
+
+small - sm - Tablets 
+
+medium - md - laptops 
+
+large - lg --- Desktops/ laptops
+ 
+Grid - rows and columns 
+
+    - 12 columns 
+
+1 2 3       4 5 6      7 8 9           10 11 12
+ 
+col-device-columnspaces
+ 
+Small devices 
+
+4 columns - col-sm-3 ------ 12/4 = 3
+ 
+Responsive GRID
+ 
+Create a row - Responsive row - xs - 1 column - 12 column spaces 
+
+sm - 2 columns - 6 column spaces 
+
+md - 3 columns - 4 column spaces 
+
+lg - 4 columns - 3 column spaces
+ 
+---------------------------------------------------------------------------
+
+Copilot
+ 
+- Before chatGPT & Copilot 
+
+    - Google/ Browsers 
+
+    - Stack Overflow 
+
+    - Senior DEveloper 
+
+    - Youtube 
+
+    - Documentation
+ 
+Developer 
+
+Problem 
+
+Google 
+
+Stacj Overflow 
+
+Documentation 
+
+Write Code
+ 
+Now,
+ 
+Developer 
+
+Describe Requirement 
+
+Github Copilot 
+
+Suggested code 
+
+Debeloper Review 
+
+Final code  
+ 
+function add(a,b)
+
+{
+
+    return a + b
+
+}
+ 
+const users = 
+
+they predict 
+
+const users = []
+ 
+Assistant - AI
+ 
+What is AI ? 
+
+- Artificial Intelligence is the ability of machines or softwares to perform tasks - manually require human intelligence
+ 
+Human Intelligence 
+
+    Think 
+
+    Learn 
+
+    speak 
+
+    Read 
+
+    Listen 
+
+    write
+ 
+AI 
+
+- Software perform similar tasks
+ 
+AI 
+
+Machine learning 
+
+Deep Learning 
+
+Generative AI 
+
+LLMs 
+
+Github Copilot
+ 
+Machine Learning 
+
+    - Subset Of AI 
+
+    - Computers learn[patterns from data 
+
+    2 + 3 = 5
+ 
+- Input + output -> Machine learn rules
+ 
+Deep Learning 
+
+- ML uses algorithms 
+
+- Uses Artifical Neural Networks - Human brain
+ 
+Input 
+
+Neurons 
+
+Neurons 
+
+Neurons 
+
+Output
+ 
+Geenrative AI 
+
+    - chatGPT
+
+    - Github Copilot 
+
+    Image generators 
+
+    - Coding assistants
+ 
+Traditional AI 
+
+Predict 
+
+classify 
+
+Recognise
+ 
+Gen AI 
+
+Creates 
+
+Text, Images, Code, Music, Videos
+ 
+LLMs 
+
+- Read billions of sentences 
+
+- Learned - How langauge works 
+
+- Trained - Trained model - Large Language Model
+ 
+Books, artciles, webites, wikipedia, research paers, source code, 
+
+Training 
+
+LLM 
+
+Question 
+
+Answer
+ 
+Tokens
+ 
+Context window - What AI remembers as conteext  
+ 
+Prompt 
+
+The instruction taht you give to SI
+ 
+CREATE CODE ---- BAD PROMPT  
+ 
+GOOD PROMPT 
+
+Create a responsive react login page using functional component with email, password validation and tailwind CSS  
+ 
+Better Prompt 
+
+Create a responsive react login page using functional component
+
+Include email and password fields 
+
+Validate empty inputs 
+
+Display error messages 
+
+use Tailwind CSS 
+
+Add a submit Button 
+
+use useState
+ 
+Better prompt - better result
+ 
+setfirst()
+ 
+GitHub Copilot 
+
+AI 
+
+ML 
+
+DL 
+
+GEN AI 
+
+LLM 
+
+GITHUB COPILOT - An application which is powered by LLM 
+
+CODE
+ 
+GitHub Copilot work 
+
+Developer 
+
+Write comment 
+
+VS Code 
+
+GitHub Copilto Extension 
+
+AI Model 
+
+Suggestion 
+
+Developer Review 
+
+Accept/ Reject 
+
+Finaal code
+ 
+ctrl + alt + i
+ 
+Best Practices 
+
+- Review code 
+
+- Boiler plate codes 
+
+- Prompts - specific 
+
+- Junior developer/ intern 
+
+- templates for code generation
+ 
+10.3 million users
+ 
+Advanatages 
+
+- faster to 55% - Github research 
+
+- 74% of developers report increased focus
+ 
+Limitations 
+
+- AI responsibly - Problem 
+
+- Halucinate 
+
+- Bad results 
+
+- Provide any sensitive info 
+
+ 

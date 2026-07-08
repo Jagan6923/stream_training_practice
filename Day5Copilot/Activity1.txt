@@ -1,0 +1,8 @@
+•Exercise 1: Generate a complete React functional component with useState for a todo list
+•Exercise 2: Use Copilot Chat to explain and refactor an existing service to use modern patterns
+•Exercise 3: Create a form with React Hook Form and custom validation using prompt engineering techniques
+•Exercise 4: Generate comprehensive unit tests for a component using /tests command
+•Exercise 5: Use Agent Mode to scaffold a complete CRUD feature with React
+•Exercise 6: Debug a performance issue using Copilot Chat with error context
+•Exercise 7: Generate API integration code with interceptors and error handling
+ 

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Product Card</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color: #fff;
+        }
+        /* Responsive font size */
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.5rem;
+        }
+
+        .product-card {
+            background-color: #c1e7f1;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Responsive image */
+        .product-card img {
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+        }
+
+        /* Layout for product list */
+        .list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 1rem;
+            color: #555;
+            margin: 10px 0;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #000;
+            margin: 10px 0;
+        }
+
+        .buy-button {
+            background-color: #03242a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* media query added for mobile screen adjustments  */
+        @media (max-width: 768px) {
+            .product-card {
+                max-width: 90%;
+            }
+
+            .product-card img {
+                max-width: 90%;
+            }
+            
+            .buy-button {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive Product Card</h1>
+    <div class="list">
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Product Image" class="product-image">
+        <h2 class="product-title">Samsung fit 3</h2>
+        <p class="product-description">Best fitness tracker for everyday use.</p>
+        <p class="product-price">₹99.99</p>
+        <button class="buy-button">Buy</button>
+    </div>
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Product Image" class="product-image">
+        <h2 class="product-title">Apple watch</h2>
+        <p class="product-description">Best smartwatch for iOS users.</p>
+        <p class="product-price">₹99.99</p>
+        <button class="buy-button">Buy</button>
+    </div>
+    <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="Product Image" class="product-image">
+        <h2 class="product-title">Amazefit watch</h2>
+        <p class="product-description">Best fitness tracker for everyday use.</p>
+        <p class="product-price">₹99.99</p>
+        <button class="buy-button">Buy</button>
+    </div>
+    </div>
+</body>
+</html>

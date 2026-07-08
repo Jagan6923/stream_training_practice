@@ -1,0 +1,205 @@
+.todo-app {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  background: linear-gradient(155deg, rgba(255, 255, 255, 0.96), rgba(250, 252, 255, 0.9));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  padding: 2.1rem;
+}
+
+.todo-app h1 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  text-align: left;
+  font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+  letter-spacing: 0.01em;
+}
+
+.todo-app h1::after {
+  content: '';
+  display: block;
+  width: 78px;
+  height: 5px;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #14b8a6 0%, #38bdf8 100%);
+}
+
+.error-text {
+  margin: 0 0 0.85rem;
+  color: #991b1b;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+}
+
+.success-text {
+  margin: 0 0 0.85rem;
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+}
+
+.todo-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  margin-bottom: 0.9rem;
+}
+
+.todo-form input {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 0.78rem 0.9rem;
+  font-size: 1rem;
+  background: #ffffff;
+  color: var(--text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-form input:focus,
+.project-form input:focus,
+.project-form select:focus {
+  outline: none;
+  border-color: #22c1ac;
+  box-shadow: 0 0 0 3px rgba(34, 193, 172, 0.2);
+}
+
+.todo-form button,
+.todo-footer button,
+.delete-button,
+.project-actions button,
+.card-actions button {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0.68rem 1rem;
+  background: linear-gradient(180deg, #14b8a6 0%, #0f766e 100%);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+}
+
+.todo-form button:hover,
+.todo-footer button:hover,
+.delete-button:hover,
+.project-actions button:hover,
+.card-actions button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+  box-shadow: 0 12px 24px rgba(15, 118, 110, 0.25);
+}
+
+.todo-form button:active,
+.todo-footer button:active,
+.delete-button:active,
+.project-actions button:active,
+.card-actions button:active {
+  transform: translateY(0);
+}
+
+.todo-form button:focus-visible,
+.todo-footer button:focus-visible,
+.delete-button:focus-visible,
+.project-actions button:focus-visible,
+.card-actions button:focus-visible {
+  outline: 3px solid rgba(20, 184, 166, 0.35);
+  outline-offset: 2px;
+}
+
+.todo-form button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  filter: grayscale(0.08);
+}
+
+.field-error {
+  margin: -0.3rem 0 0.9rem;
+  color: #991b1b;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.todo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.85rem;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  padding: 0.78rem 0.9rem;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.todo-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(148, 163, 184, 0.22);
+}
+
+.todo-item label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.delete-button {
+  background: linear-gradient(180deg, #e11d48 0%, #be123c 100%);
+}
+
+.delete-button:hover {
+  box-shadow: 0 12px 24px rgba(190, 18, 60, 0.25);
+}
+
+.todo-footer {
+  margin-top: 1.15rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px dashed #d4dde6;
+  padding-top: 0.95rem;
+}
+
+.todo-footer p {
+  margin: 0;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+@media (max-width: 560px) {
+  .todo-app {
+    padding: 1.2rem;
+  }
+
+  .todo-form {
+    grid-template-columns: 1fr;
+  }
+
+  .todo-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}

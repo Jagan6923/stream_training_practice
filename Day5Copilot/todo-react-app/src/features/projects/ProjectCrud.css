@@ -1,0 +1,112 @@
+.project-crud {
+  margin-top: 1.7rem;
+  border-top: 1px solid #dce6f0;
+  padding-top: 1.5rem;
+}
+
+.project-crud h2 {
+  margin: 0;
+  font-size: 1.38rem;
+  color: #0f172a;
+  letter-spacing: 0.01em;
+}
+
+.project-crud-subtitle {
+  margin: 0.4rem 0 1.1rem;
+  color: #475569;
+}
+
+.project-error {
+  color: #991b1b;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+}
+
+.project-success {
+  color: #047857;
+  background: #ecfdf5;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  font-weight: 600;
+}
+
+.project-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.project-form label {
+  font-size: 0.9rem;
+  color: #334155;
+  font-weight: 700;
+}
+
+.project-form input,
+.project-form select {
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 0.68rem 0.78rem;
+  background: #ffffff;
+}
+
+.project-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 0.68rem;
+}
+
+.project-actions .cancel {
+  background: linear-gradient(180deg, #64748b 0%, #475569 100%);
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 0.82rem;
+}
+
+.project-card {
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 0.95rem;
+  background: linear-gradient(180deg, #f8fbff 0%, #f5faff 100%);
+  box-shadow: 0 10px 20px rgba(148, 163, 184, 0.16);
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 26px rgba(59, 130, 246, 0.16);
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem;
+  color: #1e40af;
+}
+
+.project-card p {
+  margin: 0.25rem 0;
+  color: #0f172a;
+}
+
+.card-actions {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.55rem;
+}
+
+.card-actions .danger {
+  background: linear-gradient(180deg, #e11d48 0%, #be123c 100%);
+}
+
+@media (max-width: 640px) {
+  .project-form {
+    grid-template-columns: 1fr;
+  }
+}

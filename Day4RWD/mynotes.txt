@@ -1,0 +1,71 @@
+Responsive web Design
+
+1. First rule is need to add viewport in meta tag
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+2. For images set width to 100%
+
+for more neat give max-width:100%; height:auto
+
+3. Picture element - will helpful for set images according
+to the device
+
+4. For text use vw for Responsive
+
+1vw=1% of viewport width
+
+5. Media Queries
+
+
+============================================
+
+Responsive Design
+
+    │
+
+    ├── Viewport
+    ├── Flexible Layout
+    ├── Flexible Images
+    ├── Media Queries
+    └── Responsive Typography
+    
+    
+
+    1. Viewport - Visible area of the browser.
+
+        Desktop - 1920 px wide
+        Laptop - 1366 px
+        Tablet - 768 px
+        Mobile - 375 px
+
+        so according to the device the viewport width size differ
+    
+    2. Flexible layout - not use fixed widths everywhere
+        if i give width of the container 1200px in a 400px mobile it
+        will overflow so Horizontal scrolling will happen
+
+        use width/max-width to 100%
+        use relative units - %, vw, vh, rem, em
+
+        1 rem = 16px
+
+
+    3. Media Queries - if screen becomes this size apply these css
+        @media (size info){
+            style{
+
+            }
+        }
+
+    4. Responsive images
+        img{
+            max-width:100%;
+            height:auto;
+        }    
+        meaning never exceed parent width - auto adjust height
+
+    5. Responsive Typography
+        use rem, vw, clamp    
+

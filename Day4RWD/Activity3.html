@@ -1,0 +1,227 @@
+<!-- ACTIVITY 
+Student Profile Dashboard 
+- A Banner , Navbar, Carousel
+- Student Statistics - (Use Grid) - Active learners, Upcoming Assignments, Tasks completed 
+- Student Information table 
+	- Name, Email, Skill, Score 
+- Student Registration Form 
+	- Name,age,  Email, Skill, checkboxes, dropdown, radio buttons Selection Submit Button -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+    <header>
+        <div class="bg-primary text-white text-center py-4">
+            <h1 class="mb-1">SSM Dashboard</h1>
+            <p class="mb-0">Track performance, progress, and registration details in one place.</p>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="#">SSM Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#stats">Statistics</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#students">Students</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container my-4">
+        <section class="mb-4">
+            <div id="studentCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#studentCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded shadow-sm">
+                    <div class="carousel-item active">
+                        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80"
+                            class="d-block w-100" alt="Students in classroom" style="height: 320px; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&w=1200&q=80"
+                            class="d-block w-100" alt="Students working together" style="height: 320px; object-fit: cover;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1200&q=80"
+                            class="d-block w-100" alt="Learning and discussion" style="height: 320px; object-fit: cover;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#studentCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#studentCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+
+        <section id="stats" class="mb-4">
+            <h2 class="h4 mb-3">Student Statistics</h2>
+            <div class="row g-3">
+                <div class="col-12 col-md-4">
+                    <div class="card text-bg-success h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5">Active Learners</h3>
+                            <p class="display-6 mb-0">186</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card text-bg-warning h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5">Upcoming Assignments</h3>
+                            <p class="display-6 mb-0">24</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="card text-bg-info h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5">Tasks Completed</h3>
+                            <p class="display-6 mb-0">712</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="students" class="mb-4">
+            <h2 class="h4 mb-3">Student Information</h2>
+            <div class="table-responsive shadow-sm rounded">
+                <table class="table table-striped table-hover mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Skill</th>
+                            <th scope="col">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jeyaraman</td>
+                            <td>jeyaraman@email.com</td>
+                            <td>HTML & CSS</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                            <td>Dinesh</td>
+                            <td>dinesh@email.com</td>
+                            <td>JavaScript</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>Rajesh</td>
+                            <td>rajesh@email.com</td>
+                            <td>Bootstrap</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td>Mani</td>
+                            <td>mani@email.com</td>
+                            <td>Responsive Design</td>
+                            <td>90</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="register" class="mb-5">
+            <h2 class="h4 mb-3">Student Registration Form</h2>
+            <form class="bg-white p-4 rounded shadow-sm border">
+                <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                        <label for="studentName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="studentName" placeholder="Enter full name" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="studentAge" class="form-label">Age</label>
+                        <input type="number" class="form-control" id="studentAge" min="10" max="60" placeholder="Enter age" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="studentEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="studentEmail" placeholder="name@example.com" required>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="studentSkill" class="form-label">Skill</label>
+                        <input type="text" class="form-control" id="studentSkill" placeholder="e.g. JavaScript, React" required>
+                    </div>
+
+                    <div class="col-12">
+                        <label class="form-label d-block">Learning Preferences (Checkboxes)</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="prefVideo" value="Video Lessons">
+                            <label class="form-check-label" for="prefVideo">Video Lessons</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="prefDocs" value="Documentation">
+                            <label class="form-check-label" for="prefDocs">Documentation</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="prefLive" value="Live Sessions">
+                            <label class="form-check-label" for="prefLive">Live Sessions</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label for="courseTrack" class="form-label">Course Track (Dropdown)</label>
+                        <select class="form-select" id="courseTrack" required>
+                            <option value="" selected disabled>Select a track</option>
+                            <option>Frontend Development</option>
+                            <option>Backend Development</option>
+                            <option>Full Stack Development</option>
+                            <option>Data Analytics</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <label class="form-label d-block">Mode (Radio Buttons)</label>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="mode" id="modeOnline" value="Online" required>
+                            <label class="form-check-label" for="modeOnline">Online</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="mode" id="modeOffline" value="Offline" required>
+                            <label class="form-check-label" for="modeOffline">Offline</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="mode" id="modeHybrid" value="Hybrid" required>
+                            <label class="form-check-label" for="modeHybrid">Hybrid</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary px-4">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
