@@ -1,0 +1,153 @@
+html, body {
+  margin: 0;
+  /* background-color: #082e67; */
+  background-color: black;
+  color: white;
+}
+
+.movie{
+  width: 80%;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.movie-title {
+  margin: 0 0 12px;
+  text-align: left;
+}
+
+.movie img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 6px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.movie-content{
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.movie-info{
+  width: 100%;
+}
+
+.movie p{
+  text-align: left;
+  width: 100%;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .movie {
+    width: 92%;
+  }
+
+  .movie-content {
+    flex-direction: column;
+  }
+
+  .movie img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+  }
+}
+
+.cake-container{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  border: 1px solid #dee2e6;
+  padding: 20px;
+}
+
+.cake{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cake h3{
+  text-align: center;
+  width: 100%;
+  margin: 12px 0 8px;
+}
+
+.cake p{
+  text-align: center;
+  width: 100%;
+  margin: 4px 0;
+}
+
+.cake img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+
+.table{
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.table th, .table td{
+  border: 1px solid #dee2e6;
+  padding: 8px;
+  text-align: left;
+  
+}
+
+
+
+.header{
+  text-align: center;
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.carousel-container {
+  margin: 20px auto;
+  height: 400px;
+  overflow: hidden;
+}
+
+
+.carousel-image {
+  display: block;
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.home {
+  text-align: center;
+  margin: 20px;
+}
+
+.footer {
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-top: 1px solid #dee2e6;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}

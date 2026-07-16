@@ -1,0 +1,17 @@
+.btn{
+    color: aliceblue;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 26px;
+    margin: 10px;
+}
+
+
+.subheading{
+    color: green;
+    font-size: 30px;
+    text-align: center;
+}

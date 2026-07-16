@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(2, 2, 33);
+  color: white;
+}
+
+h1{
+  text-align: center;
+  margin: 20px 0;
+  padding: 40px;
+  border-bottom: 1px solid white;
+}
+
+.hotel{
+  width: 80%;
+  margin: 20px auto;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.hotel img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin: 0;
+  border-radius: 6px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.hotel-content{
+  width: 100%;
+}
+
+.hotel-content h2{
+  margin-bottom: 8px;
+}
+
+.hotel p{
+  text-align: left;
+  width: 100%;
+  margin: 4px 0;
+}

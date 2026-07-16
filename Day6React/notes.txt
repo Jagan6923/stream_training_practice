@@ -1,0 +1,375 @@
+REACTJS
+ 
+What is REACTJS ?
+Why REACTJS?
+Who uses ReactJS ?
+How ReactJS works ?
+ 
+- ReactJS is a Javascript library which is used to craete Frontend/ UI of a web application
+ 
+- ReactJS has come up with some important features which make it a modern library
+ 
+1. Component based architecture 
+    Ex: Mobile Chargers 
+        - Previous - USB Cable & adapter - attached - Replace the entire charger 
+        - Now - USB Cable & adapter - Seperated
+ 
+    - HTML, CSS, JS 
+    - React tells us to craete independent / individual components - whenever there is a failure, only we replace/ update particular component  
+ 
+2. Fast - Virtual DOM & Diffing algorithm 
+    DOM - Document Object Model 
+    - Tree like representation of HTML content  
+<html>
+<head></head>
+<body>
+<h1>ReactJS</h1>
+<button>Update skill</button>
+</body>
+</html>
+    Reconciliation process 
+    - Rendering was synchronous 
+    - Large component tress could block UI 
+    - No way to pause, prioritize , or resume work
+ 
+    - Fiber Architecture 
+    - Modern Reconciliation/ Rendering engine
+ 
+    - Updated implementation of diffing algortihm 
+    - Break the rendering work into small units (fibers)
+    - Pause, Resume and prioritize updates 
+    - Enabling features like concurrent rendering , suspense, transitions, better scheduling
+ 
+    Type + React filters 5000 products -> UI updates
+ 
+    Type -> update input immediately 
+    |
+    Continue filtering products
+ 
+    --- Suspense - display a fallback UI 
+    - Blank screen ------------------ Loading....
+ 
+- Transistions tell React 
+    - updates are not urgent, prioritise more important interactions first
+ 
+    a
+    ap 
+    app 
+    appl
+    apple
+ 
+ 
+Schedule - React decide which update to happen first
+ 
+3. Single page web applications 
+- Upadte the content dynamically without refreshing the entire page
+ 
+4. Reusability 
+    - 100s of buttons 
+<button>Save </button>
+<button>Login </button>
+- Button component 
+    - reuse
+ 
+5. Ease of use 
+    - HTML, JS
+ 
+- Facebook 
+- Instagram 
+- Makemytrip 
+- Pinterest 
+- Uber 
+- Swiggy 
+- Paypal
+ 
+- npm run dev - start the server  
+- host our app - ip address - 127.0.0.1/
+ 
+- npm run build  
+ 
+NPM - Node Package Manager 
+    - Manages millions of packages 
+    - Repository
+ 
+15 softwares - app 
+Google - search for package - Install - Extract - Copy them into ur project  
+ 
+Command - CLI 
+npm install packagename --- locally 
+npm install packagename -g ----- Install the package globally 
+npm uninstall packagename
+npm update packagename
+npm ls - list of packages 
+npm ls -g
+ 
+CREATE REACT APP - Package 
+    - Slow satrt - Take some ttime to satrt dev server 
+    - slow build - webpack - Heavy bundler 
+    - Complex config 
+    - Not actively improving
+ 
+Vite - Why ? 
+- Next - gen frontennd build tool  
+- Fast - uses ES Modules - Browser directly understand ES MOdules 
+- No heavy building 
+- Instant server start 
+- HMR - HOT MODULE REPLACEMENT - CHANGES REFLECT INSTANTLY - NO FULL RELOAD
+ 
+npm create vite@latest  myreactapp
+ 
+pnpm
+project1
+    node_modules 
+        react
+project2
+    node_modules 
+        react
+ 
+project3
+    node_modules 
+        react
+ 
+pnpm 
+Global store 
+    react 
+            project1
+            project2
+            project3
+ 
+PROJECT FOLDER 
+1. NODE_MODULES - Installation repository - Huge folder 
+    react ------ react dom ------ json ------ json-buffer ----- other 
+    eslint - eslint plugins - other - another 
+2. public - images/ assets 
+3. src - components - all the components will be craeted here 
+4. .git ignore ------------- files will be ignored/ not pushed to the dev / prod 
+5. package.json ----- Store all the info about the packages used in the project 
+6. index.html ------------- single html file 
+7. README.md - document info related to your project
+ 
+Component - JS Function which returns JSX (JS & XML) -( HTML Like syntax ) Code
+ 
+In JS ,
+ 
+function app(){
+    retrun value;
+}
+ 
+app() ---- call/invoke
+ 
+In React 
+function App(){
+    return <h1></h1>
+}
+ 
+<App />
+ 
+Rules of JSX Elements 
+1. All the HTML elements must be wrapped with a parent tag   
+<> </> ---- React Fragemnts
+ 
+2. All the HTML tags must have a closing tag
+ 
+3. In HTml, 
+    Inline CSS, 
+<p style="color:red; font-sie:18px">
+    In React, 
+<p style={{
+            color: "red", 
+            font-size: "18px"
+        }}>
+ 
+4. In HTML, 
+<p class="">
+<label for="">
+    In React 
+<P className =" ">
+<label htmlFor >
+ 
+5. If you want to write js code in between html, use curly braces
+ 
+6. In HTML, we have fixed tags and attributes 
+In React - userdefined tags 
+    - we can create our own attribute
+ 
+- Components are categorised into 2 
+    - Functional Components --- Lack of features - Easy --- All the faetures 
+    - Class based components  --- All the faetures - Complex  
+            - paremt class is craeted in the react packages - all the features
+ 
+Header 
+Body 
+Footer
+ 
+- Every component - Uppercase letter 
+    - Filename should be uppercase 
+    - Try to add same as filename as the component name
+ 
+Bootstrap - npm install bootstrap 
+    - Configure bootstrap
+ 
+Create a Header component - Logo on left, Links ----- App component 
+Create a Carousel - 3 Images - Fashion, Food, Electronics ----- App component
+Create a Home component ------ App component 
+Craete a Footer Components - App component
+ 
+PASS THE DATA
+ 
+PROPS - A mechanism where we can pass the data from one component (parent) to other component (child). Props are immutable ----- Read only data
+ 
+In js,
+ 
+function home(){ ----------- para,eters
+ 
+}
+ 
+home(1,2,3) -------- arguments
+ 
+In React
+ 
+function Home(){ -------------- props
+ 
+}
+ 
+<Home name="" age={} place= "" /> ------- attributes
+ 
+Parent Componet - Home - craete 5 objects - movie = {
+    title: "",
+    hero: "",
+    rating: "",
+    release: "",
+    poster: ""
+}
+ 
+Craete a Child Component - MovieCard - Display the details in Crad format
+ 
+Laptop - 5000 items 
+AC - 2000 items 
+Iphone - 4000 items
+ 
+I cannot repeat reusing the component for no of times
+ 
+MAP - Iterate throygh the list 
+[
+    {
+        cakeid: "",
+        image: "",
+        name: "",
+        price: "'
+    },
+    {  cakeid: "",
+        image: "",
+        name: "",
+        price: "'
+    },
+    {
+        cakeid: "",
+        image: "",
+        name: "",
+        price: "'
+    }
+]
+ 
+Create a CakeGallery - 20 cakes - Map - Each cake in a card
+ 
+LISTS AND KEYS
+ 
+Create a component - Restaurant - restaurants ---- [
+    {
+        id: ,
+        name: "",
+        cuisine: "",
+        rating: "",
+        eta: "",
+        image: "",
+        isOpen: 
+    }
+]
+ 
+ 
+Display the data using RestaurantCard
+ 
+Data - One direction - Read only - One way data binding
+ 
+Props -----> Data flow ---> Read only -----> Unidirectional
+ 
+<Home>Data </Home>
+ 
+{children} --- Children props allow content passing between opening and closing tags
+ 
+Types of CSS 
+Inline CSS ----- Style attribute
+ 
+Module CSS - Home.module.css
+ 
+.sample{
+    color: "blue"
+}
+ 
+Home component 
+import Styles from "./Home.nodiule.css"
+ 
+<h1 className={Styles.sample}>Discount</h1>
+ 
+Data Flow -----> Two directions / Bi directioonal data flow 
+Two way Data binding/ Event Binding ----- Trigger an event --- click, press, mouse movement
+ 
+create a component - MarketStock - Heading - Display some number 
+                 2  Buttons - click - AddStock, Reduce Stock
+ 
+stockHandler() - Function call 
+stockHandler - Function reference
+ 
+Client - Read only 
+Functional component
+ 
+Client ----- Click - update 
+Class component ----Migarting the read only data -----  render the data
+ 
+Hooks ----- Functional components ------ JS Functions which are predefined in the react package 
+- All the hooks in React will have prefix as use
+ 
+STATE ----- RE RENDER / UPDATE DATA IN THE COMPONENT
+ 
+useState() ------- RE RENDER THE DATA
+ 
+- Cannot directly mutate state variable
+ 
+react package ----- function useState(){
+    return [variable, method]
+}
+ 
+import usestate from raect
+ 
+let [var, method] = useState()
+ 
+let [stock, setStock] = useState()
+ 
+let [place, setPlace] = useState()
+ 
+1000 lines of code
+ 
+setPlace()
+ 
+4 buttons - Add stock with 50 
+            Add stock with 100
+            Reducse stock by 50
+            Reduce stock by 100
+ 
+() => {
+    stockHandler(50)
+}
+ 
+Activity 1
+Movie Card - View Description
+ 
+let [isVidew, setIsView] = useState(false)
+ 
+Click - View Description - Update the sate value ------ Show the description 
+    - Button text - Hide Description
+ 
+Activity 2 
+Each Restaurant card 
+Like button 🩷 Liked -----  likes : 2
+ 
+2 state variables - like count, restauarnt has been liked
