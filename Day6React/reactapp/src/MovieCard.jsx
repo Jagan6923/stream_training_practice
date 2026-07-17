@@ -1,7 +1,25 @@
 import React, { useState } from 'react'
+import Seat from './Seat';
 
 const MovieItem = ({ movie }) => {
     const [isViewDescription, setIsViewDescription] = useState(false);
+
+
+    const totalSeats = 15;
+    const [seats, setSeats] = useState(Array(totalSeats).fill(true));
+
+    const availableSeats = seats.filter((isAvailable) => isAvailable).length;
+    const selectedSeats = totalSeats - availableSeats;
+
+    const handleSeatToggle = (seatIndex) => {
+        setSeats((prevSeats) => prevSeats.map((seat, index) => (
+            index === seatIndex ? !seat : seat
+        )));
+    };
+
+    if(!movie) {
+        return <p className='text-center mt-4'>No movies available right now.</p>
+    }
 
     return (
         <div className='movie'>
@@ -15,10 +33,28 @@ const MovieItem = ({ movie }) => {
                     {isViewDescription && <p>{movie.description}</p>}
                     <button
                         className='btn btn-secondary'
-                        style={{color:"black"}}
+                        style={{ color: "black" }}
                         onClick={() => setIsViewDescription(!isViewDescription)}
                     >
                         {isViewDescription ? "Hide Description" : "View Description"}
+                    </button>
+                    <p>Available Seats: {availableSeats}</p>
+                    <p>Selected Seats: {selectedSeats}</p>
+                    <div className='seat-container'>
+                        {seats.map((isAvailable, index) => (
+                            <div key={index} className='seat-wrapper'>
+                                <Seat
+                                    isAvailable={isAvailable}
+                                    onToggle={() => handleSeatToggle(index)}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    <button
+                        className='btn btn-info m-2'
+                        disabled={selectedSeats === 0}
+                    >
+                        Proceed to Payment
                     </button>
                 </div>
             </div>
@@ -26,7 +62,11 @@ const MovieItem = ({ movie }) => {
     )
 }
 
-const MovieCard = ({ movies }) => {
+const MovieCard = ({ movies = [] }) => {
+    if (movies.length === 0) {
+        return <p className='text-center mt-4'>No movies available right now.</p>
+    }
+
     return (
         <div className='movie-container'>
             {movies.map((movie) => (

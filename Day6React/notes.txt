@@ -373,3 +373,126 @@ Each Restaurant card
 Like button 🩷 Liked -----  likes : 2
  
 2 state variables - like count, restauarnt has been liked
+
+Activity3 
+Build a seatt booking 
+- Initially display 10 availabe seats 
+- Clicking on seat booking - reduce the seat count by 1 
+- When seats are gretaer than 0, status: Available with a green dot 
+- When seats become 0 , display a red badge - House Full 
+- Disable the "Book Seat" Button when no seats available
+- Now add another button called cancel booking. When the user 
+  clicks it, the seat count should increase by 1. But remember, 
+  the total seats should never exceed 10
+
+Change request 
+- Initially display 15 availabe seats 
+- Clicking on seat booking - 
+SCREEN
+ 
+🟩 🟩 🟩 🟩 🟩
+ 
+🟩 🟩 🟩 🟩 🟩
+ 
+🟩 🟩 🟩 🟩 🟩
+ 
+Each square is a React component 
+Click on Green  - Red square ,Available Seats ciunt decrease , seats selected - 4
+Red ---> Green ------ Available setas should incraee, seats sleected - decrease
+ 
+Proceed to payment 
+- Disable the payment button when no setas are selected  
+
+
+=======
+
+ReactJS Basics
+- Introduction to React 
+- Rules of JSX 
+- Why React ? - Virtual DOM
+- Functional components 
+- Class Component - props, state 
+- Props ---- Numbers, String, Object, Array 
+- Lists & Keys 
+- State --- Event Hadnling
+ 
+Functional - Props 
+Class - this.props
+
+
+===
+
+Display Name
+mam share the notes ass well
+
+http://localhost:5173/ -------- Default component - App 
+http://localhost:5173/cakes ------- Cake Gallery 
+http://localhost:5173/restaurants ------ Restaurant
+ 
+Routing 
+- Navigate through different routes
+ 
+npm install react-router-dom
+ 
+1. Create the routes 
+2. Provide the routes to our app
+ 
+Routing in 2 ways 
+1. BrowserRouter  ---- Somple , JSX Based 
+2. createBrowserRouter ---- Advanced , Configuration based
+ 
+Products - without React Router 
+            - Request products.html from the server 
+            - Entire page reloads 
+            - HTML, CSS., JS 
+            ----- Everything loads again
+ 
+   React - Changed this - React simply replace the component 
+            - Home 
+            - Products
+ 
+            - No page refresh 
+            - Client Side Routibg
+ 
+BrowserRouter - Watch the url 
+    - /home ----- Change ------ /products ------------Ok - Show Products component 
+    /about ----- Show About component
+ 
+  localhost:5173/products - uses window.history ----- History API 
+  location.href    ---- refresh the entire page     
+ 
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+ 
+Routes - decide if path ="/"
+if url ="/products" ---- render 
+<BrowserRouter>
+<Routes>
+<Route path="/" element="<Home />" />
+<Route path="/cakes" element="<CakeGallery />" />
+<Route path="/restaurants" element="<Restaurant />" />
+ 
+    </Routes>
+</BrowserRouter>
+ 
+Route - Each route represents one mapping
+ 
+Why createBrowserRouter ?
+ 
+products page 
+BrowserRouter - Render product component - hit the api - Loader ----- show Data
+ 
+Why not fetch data BEFORE RENDERING ? ------- createBrowserRouter() ----- Data Router  
+createBrowserRouter ---- URL - Loader ---- Data Ready ---- Component  
+ 
+createBrowserRouter([
+    {
+        path: "/",
+        element: <App/>
+    }, 
+    {
+        path: "/about",
+        element: <About />
+    }
+]) ------
+ 
+======

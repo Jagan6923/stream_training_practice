@@ -1,36 +1,17 @@
 import React from 'react'
-import Hotel from './Hotel'
 import MarketStock from './MarketStock'
+import Sample from './Sample'
 import styles from './h2.module.css'
+import { Routes, Route } from "react-router-dom";
+import Home from './Home';
 const App = () => {
 
-
-//   LISTS AND KEYS
- 
-// Create a component - Restaurant - restaurants ---- [
-//     {
-//         id: ,
-//         name: "",
-//         cuisine: "",
-//         rating: "",
-//         eta: "",
-//         image: "",
-//         isOpen: 
-//     }
-// ]
- 
- 
-// Display the data using RestaurantCard
-
-
-
- 
   return (
     <>
-      <MarketStock/>
-      <h2 className='subheading'>External Css</h2>
-      <h2 className='inline' style={{ color: "yellow", fontSize: "30px", textAlign: "center" }}>Inline Css</h2>
-      <h2 className={styles.modular}>Modular Css</h2>
+      <Routes>
+        <Route path="/market" element={<MarketStock />} />
+        <Route path="/sam" element={<Sample />} />
+      </Routes>
     </>
   )
 }

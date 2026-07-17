@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./Header";
 import Home from "./Home";
 import Footer from "./Footer";
 import CarouselComponent from "./Carousel";
@@ -7,6 +6,8 @@ import MovieCard from "./MovieCard";
 import Cake from "./Cake";
 import Employee from "./Employee";
 import Hotel from "./Hotel";
+import Car from "./Car";
+import Car1 from "./Car1";
 
 function App() {
 
@@ -129,10 +130,13 @@ function App() {
       <CarouselComponent/>
       <Home/>
       <Footer/> */}
-      <MovieCard movies={moviesList} />
+      {/* <MovieCard movies={moviesList} /> */}
       {/* <Cake cakes={cakesList} /> */}
       {/* <Employee/> */}
-      <Hotel hotel={hotel} />
+      {/* <Hotel hotel={hotel} /> */}
+      {/* <Car /> */}
+      <Car1 />
+
 
     </>
   );

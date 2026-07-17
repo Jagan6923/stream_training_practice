@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const RestaurantCard = ({ item }) => {
-  const [likeCount, setLikeCount] = React.useState(0)
-  const [isLiked, setIsLiked] = React.useState(false)
+  const [likeCount, setLikeCount] = useState(0)
+  const [isLiked, setIsLiked] = useState(false)
 
   const handleLike = () => {
     setIsLiked(true)
     setLikeCount((prev) => prev + 1)
+  }
+
+  if (!item) {
+    return <p className='text-center mt-4'>No restaurant data available.</p>
   }
 
   return (
@@ -27,7 +31,11 @@ const RestaurantCard = ({ item }) => {
   )
 }
 
-const Hotel = ({ hotel }) => {
+const Hotel = ({ hotel = [] }) => {
+  if (hotel.length === 0) {
+    return <p className='text-center mt-4'>No hotels available right now.</p>
+  }
+
   return (
     <div>
       <div>

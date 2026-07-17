@@ -1,6 +1,10 @@
 import React from 'react'
 
-const Cake = ({ cakes }) => {
+const Cake = ({ cakes = [] }) => {
+
+    if (cakes.length === 0) {
+        return <p className='text-center mt-4'>No cakes available right now.</p>
+    }
 
     return (
         <div className='cake-container'>
