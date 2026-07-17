@@ -496,3 +496,103 @@ createBrowserRouter([
 ]) ------
  
 ======
+
+
+http://localhost:5173/ -------- Default component - App 
+http://localhost:5173/cakes ------- Cake Gallery 
+http://localhost:5173/restaurants ------ Restaurant
+ 
+Routing 
+- Navigate through different routes
+ 
+npm install react-router-dom
+ 
+1. Create the routes 
+2. Provide the routes to our app
+ 
+Routing in 2 ways 
+1. BrowserRouter  ---- Somple , JSX Based 
+2. createBrowserRouter ---- Advanced , Configuration based
+ 
+Products - without React Router 
+            - Request products.html from the server 
+            - Entire page reloads 
+            - HTML, CSS., JS 
+            ----- Everything loads again
+ 
+   React - Changed this - React simply replace the component 
+            - Home 
+            - Products
+ 
+            - No page refresh 
+            - Client Side Routibg
+ 
+BrowserRouter - Watch the url 
+    - /home ----- Change ------ /products ------------Ok - Show Products component 
+    /about ----- Show About component
+ 
+  localhost:5173/products - uses window.history ----- History API 
+  location.href    ---- refresh the entire page     
+ 
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+ 
+Routes - decide if path ="/"
+if url ="/products" ---- render 
+<BrowserRouter>
+<Routes>
+<Route path="/" element="<Home />" />
+<Route path="/cakes" element="<CakeGallery />" />
+<Route path="/restaurants" element="<Restaurant />" />
+ 
+    </Routes>
+</BrowserRouter>
+ 
+Route - Each route represents one mapping
+ 
+Why createBrowserRouter ?
+ 
+products page 
+BrowserRouter - Render product component - hit the api - Loader ----- show Data
+ 
+Why not fetch data BEFORE RENDERING ? ------- createBrowserRouter() ----- Data Router  
+createBrowserRouter ---- URL - Loader ---- Data Ready ---- Component  
+ 
+createBrowserRouter([
+    {
+        path: "/",
+        element: <App/>
+    }, 
+    {
+        path: "/about",
+        element: <About />
+    }
+]) ------
+ 
+<a> ----- Refresh the entire screen 
+<Link> ----- Not refresh the entire page
+ 
+Nested Routing - Routes inside the routes
+ 
+PARENT ROUTE - CHILD ROUTE - SPECIFY IN THE PARENT ROUTE - ABOUT CHILD ROUTE RENDERING ---- Using OUTLET ---- Render child components dynamically
+ 
+<BrowserRouter>
+<Routes>
+<Route path="/" element="<Home />" >
+<Route path="/cakes" element="<CakeGallery />" />
+<Route path="/restaurants" element="<Restaurant />" />
+</Route>
+</Routes>
+</BrowserRouter>
+ 
+Create component - Support - Children comp 
+                        2 buttons 
+                        Support From App  -------- SupportFromAPP - chuld of Support Comp 
+                        Support From CakeGallery - SupportFromCakeGallery
+ 
+useNavigate() ---- return a function is used to programatically navigate 
+Returns a function that lets you navigate programmatically in the browser in response to user interactions or effects.
+ 
+Naviagate programatically
+if(login){
+    useNavigate(path of the route)
+}
