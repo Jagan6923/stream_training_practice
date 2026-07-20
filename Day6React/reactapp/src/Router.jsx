@@ -1,54 +1,137 @@
-import React from 'react'
+import React, { Suspense, lazy } from 'react'
 import { createBrowserRouter, Outlet } from 'react-router-dom'
-import Cake from './Cake';
-import App from './App';
-import Car from './Car';
-import Car1 from './Car1';
-import MovieCard from './MovieCard';
-import Hotel from './Hotel';
 import Header from './Header';
 import Footer from './Footer';
+import Loader from './Loader';
+import Error from './Error';
+import Products from './Products';
+
+const App = lazy(() => import('./App'));
+const Car = lazy(() => import('./Car'));
+const Car1 = lazy(() => import('./Car1'));
+const Cake = lazy(() => import('./Cake'));
+const Hotel = lazy(() => import('./Hotel'));
+const MovieCard = lazy(() => import('./MovieCard'));
+const MovieDetails = lazy(() =>
+    import('./MovieCard').then((module) => ({ default: module.MovieDetails }))
+);
+
+const withSuspense = (Component, props = {}) => (
+    <Suspense fallback={<Loader />}>
+        <Component {...props} />
+    </Suspense>
+);
 
 const moviesList = [
     {
+        id: 1,
         name: "The Shawshank Redemption",
         hero: "Tim Robbins",
+        genre: "Drama",
         rating: 9.3,
         release: 1994,
         poster: "https://rukminim2.flixcart.com/image/480/640/jr6o13k0/poster/p/n/7/medium-hope-shawshank-redemption-poster-for-room-office-13-inch-original-imafdfbysget3wb4.jpeg?q=90",
-        description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+        description: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        cast: [
+            {
+                name: "Tim Robbins",
+                role: "Andy Dufresne",
+                image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Tim_Robbins_2012_Shankbone.JPG"
+            },
+            {
+                name: "Morgan Freeman",
+                role: "Ellis Boyd 'Red' Redding",
+                image: "https://upload.wikimedia.org/wikipedia/commons/7/76/Morgan_Freeman_Deauville_2018.jpg"
+            }
+        ]
     },
     {
+        id: 2,
         name: "The Godfather",
         hero: "Marlon Brando",
+        genre: "Crime",
         rating: 9.2,
         release: 1972,
         poster: "https://m.media-amazon.com/images/I/61k7Mx2IjzL._AC_UF894,1000_QL80_.jpg",
-        description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+        description: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        cast: [
+            {
+                name: "Marlon Brando",
+                role: "Vito Corleone",
+                image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Marlon_Brando_1955.jpg"
+            },
+            {
+                name: "Al Pacino",
+                role: "Michael Corleone",
+                image: "https://upload.wikimedia.org/wikipedia/commons/b/b5/Al_Pacino.jpg"
+            }
+        ]
     },
     {
+        id: 3,
         name: "The Dark Knight",
         hero: "Christian Bale",
+        genre: "Action",
         rating: 9.0,
         release: 2008,
         poster: "https://m.media-amazon.com/images/I/71dwS9phhCL.jpg",
-        description: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham."
+        description: "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+        cast: [
+            {
+                name: "Christian Bale",
+                role: "Bruce Wayne / Batman",
+                image: "https://upload.wikimedia.org/wikipedia/commons/e/e8/Christian_Bale-7835.jpg"
+            },
+            {
+                name: "Heath Ledger",
+                role: "Joker",
+                image: "https://upload.wikimedia.org/wikipedia/commons/7/7f/Heath_Ledger.jpg"
+            }
+        ]
     },
     {
+        id: 4,
         name: "Pulp Fiction",
         hero: "John Travolta",
+        genre: "Crime",
         rating: 8.9,
         release: 1994,
         poster: "https://m.media-amazon.com/images/I/61Z4YX7EbtL._AC_UF894,1000_QL80_.jpg",
-        description: "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+        description: "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+        cast: [
+            {
+                name: "John Travolta",
+                role: "Vincent Vega",
+                image: "https://upload.wikimedia.org/wikipedia/commons/8/87/John_Travolta_Cannes_2018.jpg"
+            },
+            {
+                name: "Samuel L. Jackson",
+                role: "Jules Winnfield",
+                image: "https://upload.wikimedia.org/wikipedia/commons/b/be/Samuel_L._Jackson_2019_by_Glenn_Francis.jpg"
+            }
+        ]
     },
     {
+        id: 5,
         name: "The pursuit of Happyness",
         hero: "Will Smith",
+        genre: "Drama",
         rating: 8.0,
         release: 2006,
         poster: "https://cdng.europosters.eu/pod_public/1300/263601.jpg",
-        description: "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career."
+        description: "A struggling salesman takes custody of his son as he's poised to begin a life-changing professional career.",
+        cast: [
+            {
+                name: "Will Smith",
+                role: "Chris Gardner",
+                image: "https://upload.wikimedia.org/wikipedia/commons/6/60/Will_Smith_2023.jpg"
+            },
+            {
+                name: "Jaden Smith",
+                role: "Christopher Jr.",
+                image: "https://upload.wikimedia.org/wikipedia/commons/f/f3/Jaden_Smith_2023.jpg"
+            }
+        ]
     }
 ];
 
@@ -138,34 +221,43 @@ const Router = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
+        errorElement: <Error />,
         children: [
             {
                 index: true,
-                element: <App />
+                element: withSuspense(App)
             },
             {
                 path: "home",
-                element: <App />
+                element: withSuspense(App)
             },
             {
                 path: "car",
-                element: <Car />
+                element: withSuspense(Car)
             },
             {
                 path: "car1",
-                element: <Car1 />
+                element: withSuspense(Car1)
             },
             {
                 path: "cake",
-                element: <Cake cakes={cakesList} />
+                element: withSuspense(Cake, { cakes: cakesList })
             },
             {
                 path: "movie",
-                element: <MovieCard movies={moviesList} />
+                element: withSuspense(MovieCard, { movies: moviesList })
+            },
+            {
+                path: "movie/:id/:img",
+                element: withSuspense(MovieDetails, { movies: moviesList })
             },
             {
                 path: "hotel",
-                element: <Hotel hotel={hotelList} />
+                element: withSuspense(Hotel, { hotel: hotelList })
+            },
+            {
+                path: "products",
+                element: withSuspense(Products)
             }
         ]
     }

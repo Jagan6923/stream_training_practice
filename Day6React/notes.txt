@@ -596,3 +596,97 @@ Naviagate programatically
 if(login){
     useNavigate(path of the route)
 }
+
+
+====
+
+
+
+PARAMETERUSED ROUTING
+https://localhost:5173/cakedetails/1 ------------- Component 
+                    - API ---- Attach ID coming from url ----- fetch the details of the cake  
+                    localhost:5173/cakedetails/id {
+                        response ---- Details of the cake 
+                    }
+ 
+- parameters - https://localhost:5173/cakedetails/:id
+ 
+- useParams() - Access the params from the url
+ 
+- query parameters - https://localhost:5173/userdetails?q="username"
+ 
+Loaders, actions - Routing
+ 
+Lazy loading - Technique used to load the components only when they are in need 
+- Improve initial load time & performance of an app
+ 
+import {lazy, Suspense} from "react"
+ 
+Suspense - Lets you display a fallback until its children have finished loading.
+ 
+useRouterError ---- Handle errors in the routes
+ 
+Traditional - HTML, CSS, JS 
+    LOAD ----- FETCH ------ RENDER
+ 
+REACT 
+    LOAD - RENDER - FETCH - RE RENDER  
+ 
+Life cycle methods of component 
+Mouniting Phase - Component is created 
+Updating Phase - Component gets updated 
+UnMounting Phase - Component is left  
+ 
+Class based components 
+1. componentWillMount() -- Before rendering the component 
+2. componentDidMount() -- After rendering the component - communicate with APIs - 
+3. componentDidUpdate() -- After updating the Component 
+4. componentWillUnMount() -- Before leaving the component
+ 
+Functional components 
+useEffect() - Perform side effects of a component 
+    - After the component is rendered
+ 
+useEffect(() => {}, []) - Second parameter is optional
+ 
+1. useEffect(()=>{}) --- Run everytime on each render 
+- Run after every render
+ 
+2. useEffect(() => {}, []) ---- Executed only once 
+    - Recommeneded - Servers
+ 
+3. useEffect(()=>{
+    - logic 
+    You are elidgible for vote 
+}, [age]) ---- Executed when dependancies change
+ 
+component - buttons - update name - name is updated
+ 
+fetch("/users").then((response)=>{
+    response.json()
+}).then((data)=> console.log(data))
+.catch((error) => log error )
+ 
+Axios - Communicate with APIs
+- Automatic JSON parsing 
+- Cleaner syntax 
+- Better error handling 
+- Interceptors for adding authentication tokens 
+- Easy to configure
+ 
+npm install axios
+ 
+import axios from "axios"
+ 
+useEffect(() => {
+    axios.get("api url")
+.then((res) => log response )
+.catch((err) => display error )
+ 
+}, [])
+ 
+axios.post
+axios.put 
+axios.delete
+ 
+https://fakestoreapi.com/products
