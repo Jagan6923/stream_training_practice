@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "couponCode": "DISCOUNT10",
+        "discount": 10,
+        "minimumPurchase": 50,
+        "expiryDate": "2024-12-31",
+        "status": "Active"
+    },
+    {
+        "id": 2,
+        "couponCode": "SAVE20",
+        "discount": 20,
+        "minimumPurchase": 100,
+        "expiryDate": "2024-11-30",
+        "status": "Active"
+    },
+    {
+        "id": 3,
+        "couponCode": "FREESHIP",
+        "discount": 0,
+        "minimumPurchase": 0,
+        "expiryDate": "2024-10-15",
+        "status": "Expired"
+    },
+    {
+        "id": 4,
+        "couponCode": "WELCOME15",
+        "discount": 15,
+        "minimumPurchase": 75,
+        "expiryDate": "2024-09-30",
+        "status": "Active"
+    },
+    {
+        "id": 5,
+        "couponCode": "HOLIDAY25",
+        "discount": 25,
+        "minimumPurchase": 150,
+        "expiryDate": "2024-12-25",
+        "status": "Active"
+    },
+    {
+        "id": 6,
+        "couponCode": "SUMMER5",
+        "discount": 5,
+        "minimumPurchase": 30,
+        "expiryDate": "2024-08-31",
+        "status": "Expired"
+    },
+    {
+        "id": 7,
+        "couponCode": "BLACKFRIDAY50",
+        "discount": 50,
+        "minimumPurchase": 200,
+        "expiryDate": "2024-11-29",
+        "status": "Active"
+    },
+    {
+        "id": 8,
+        "couponCode": "SPRING10",
+        "discount": 10,
+        "minimumPurchase": 60,
+        "expiryDate": "2024-04-30",
+        "status": "Expired"
+    },
+    {
+        "id": 9,
+        "couponCode": "CYBERMONDAY30",
+        "discount": 30,
+        "minimumPurchase": 120,
+        "expiryDate": "2024-11-25",
+        "status": "Active"
+    },
+    {
+        "id": 10,
+        "couponCode": "NEWYEAR20",
+        "discount": 20,
+        "minimumPurchase": 100,
+        "expiryDate": "2025-01-01",
+        "status": "Active"
+    }
+]

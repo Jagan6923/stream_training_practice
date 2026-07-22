@@ -10,6 +10,11 @@ const Header = () => {
         <Link to="/hotel">Hotels</Link>
         <Link to="/cake">Cakes</Link>
         <Link to="/car1">Cars</Link>
+        <Link to="/products">Products</Link>
+        <Link to="/users">Users</Link>
+        <Link to="/forms">Form</Link>
+        <Link to="/shop">Shop</Link>
+        <Link to="/coupon">Coupon</Link>
       </nav>
       <nav>
       </nav>

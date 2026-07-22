@@ -5,6 +5,12 @@ import Footer from './Footer';
 import Loader from './Loader';
 import Error from './Error';
 import Products from './Products';
+import Users, { UserDetails } from './Users';
+import { ProductDetails } from './ProductList';
+import Home from './Home';
+import Forms from './Forms';
+import Shop from './Shop';
+import Coupon from './Coupon';
 
 const App = lazy(() => import('./App'));
 const Car = lazy(() => import('./Car'));
@@ -211,7 +217,7 @@ const Layout = () => {
         <>
             <Header />
             <Outlet />
-            <Footer/>
+            <Footer />
         </>
     );
 };
@@ -225,11 +231,11 @@ const Router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: withSuspense(App)
+                element: withSuspense(Home)
             },
             {
                 path: "home",
-                element: withSuspense(App)
+                element: withSuspense(Home)
             },
             {
                 path: "car",
@@ -258,6 +264,30 @@ const Router = createBrowserRouter([
             {
                 path: "products",
                 element: withSuspense(Products)
+            },
+            { 
+                path: "products/:id",
+                element: withSuspense(ProductDetails)
+            },
+            {
+                path: "users",
+                element: withSuspense(Users)
+            },
+            {
+                path: "users/:id",
+                element: withSuspense(UserDetails)
+            },
+            {
+                path: "forms",
+                element: withSuspense(Forms)
+            },
+            {
+                path: "shop",
+                element: withSuspense(Shop)
+            },
+            {
+                path: "coupon",
+                element: withSuspense(Coupon)
             }
         ]
     }

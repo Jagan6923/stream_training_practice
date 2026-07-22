@@ -135,7 +135,7 @@ function App() {
       {/* <Employee/> */}
       {/* <Hotel hotel={hotel} /> */}
       {/* <Car /> */}
-      <Car1 />
+      {/* <Car1 /> */}
 
 
     </>
