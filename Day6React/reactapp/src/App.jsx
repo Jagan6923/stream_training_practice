@@ -136,8 +136,6 @@ function App() {
       {/* <Hotel hotel={hotel} /> */}
       {/* <Car /> */}
       {/* <Car1 /> */}
-
-
     </>
   );
 }

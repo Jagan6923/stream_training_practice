@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
-
+import React, { useState, useContext } from 'react'
+import { ThemeContext } from './ThemeContext.jsx'
 const RestaurantCard = ({ item }) => {
   const [likeCount, setLikeCount] = useState(0)
   const [isLiked, setIsLiked] = useState(false)
+
+
 
   const handleLike = () => {
     setIsLiked(true)
@@ -32,18 +34,26 @@ const RestaurantCard = ({ item }) => {
 }
 
 const Hotel = ({ hotel = [] }) => {
+  const { theme, toggleTheme } = useContext(ThemeContext)
+  const isDarkTheme = theme === 'dark'
+
   if (hotel.length === 0) {
     return <p className='text-center mt-4'>No hotels available right now.</p>
   }
 
   return (
-    <div>
+    <div className={`theme-page ${isDarkTheme ? 'theme-dark' : 'theme-light'}`}>
       <div>
-      <h1>Welcome to the Jagan Hotel</h1>
-      {hotel.map((item)=>(
-        <RestaurantCard key={item.id} item={item} />
-      ))}
-    </div>
+        <h1>Welcome to the Jagan Hotel</h1>
+        <div className='d-flex justify-content-center'>
+          <button className='btn theme-toggle-btn' onClick={toggleTheme}>
+            Switch to {isDarkTheme ? 'Light' : 'Dark'} Theme
+          </button>
+        </div>
+        {hotel.map((item) => (
+          <RestaurantCard key={item.id} item={item} />
+        ))}
+      </div>
     </div>
   )
 }

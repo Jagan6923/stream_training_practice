@@ -1,11 +1,30 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
 import Seat from './Seat';
+import { ThemeContext } from './ThemeContext';
 
 const getImageFileName = (posterUrl = "") => {
     const cleanUrl = posterUrl.split('?')[0];
     const segments = cleanUrl.split('/');
     return segments[segments.length - 1] || "poster.jpg";
+};
+
+export const withMovieLabel = (WrappedComponent, labelText = "Top Rated") => {
+    const EnhancedMovieItem = ({ movie, ...props }) => (
+        <div style={{ position: "relative" }}>
+            <span
+                className='badge bg-success'
+                style={{ position: "absolute", top: "8px", left: "8px", zIndex: 2 }}
+            >
+                {labelText}
+            </span>
+            <WrappedComponent movie={movie} {...props} />
+        </div>
+    );
+
+    EnhancedMovieItem.displayName = `withMovieLabel(${WrappedComponent.displayName || WrappedComponent.name || "Component"})`;
+
+    return EnhancedMovieItem;
 };
 
 const MovieItem = ({ movie }) => {
@@ -76,20 +95,33 @@ const MovieItem = ({ movie }) => {
 }
 
 const MovieCard = ({ movies = [] }) => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    const isDarkTheme = theme === 'dark';
+    const TopRatedMovieItem = withMovieLabel(MovieItem, "Top Rated");
+    
     if (movies.length === 0) {
         return <p className='text-center mt-4'>No movies available right now.</p>
     }
 
     return (
-        <div className='movie-container'>
+        <div className={`theme-page ${isDarkTheme ? 'theme-dark' : 'theme-light'}`}>
+            <div className='d-flex justify-content-center'>
+                <button className='btn theme-toggle-btn' onClick={toggleTheme}>
+                    Switch to {isDarkTheme ? 'Light' : 'Dark'} Theme
+                </button>
+            </div>
             {movies.map((movie) => (
-                <MovieItem movie={movie} key={movie.id} />
+                Number(movie.rating) >= 9
+                    ? <TopRatedMovieItem movie={movie} key={movie.id} />
+                    : <MovieItem movie={movie} key={movie.id} />
             ))}
         </div>
     )
 }
 
 export const MovieDetails = ({ movies = [] }) => {
+    const { theme, toggleTheme } = useContext(ThemeContext);
+    const isDarkTheme = theme === 'dark';
     const { id, img } = useParams();
     const selectedMovie = movies.find((movie) => (
         movie.id === Number(id) && getImageFileName(movie.poster) === img
@@ -104,7 +136,12 @@ export const MovieDetails = ({ movies = [] }) => {
         .slice(0, 3);
 
     return (
-        <div className='movie-details'>
+        <div className={`theme-page movie-details ${isDarkTheme ? 'theme-dark' : 'theme-light'}`}>
+            <div className='d-flex justify-content-center'>
+                <button className='btn theme-toggle-btn' onClick={toggleTheme}>
+                    Switch to {isDarkTheme ? 'Light' : 'Dark'} Theme
+                </button>
+            </div>
             <div className='movie'>
                 <h2 className='movie-title'>{selectedMovie.name}</h2>
                 <div className='movie-content'>

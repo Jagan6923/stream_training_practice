@@ -5,8 +5,11 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import './index.css'
 import Router from './Router.jsx'
 import { RouterProvider } from 'react-router-dom'
+import { ThemeProvider } from './ThemeContext.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={Router} />
+    <ThemeProvider>
+      <RouterProvider router={Router} />
+    </ThemeProvider>
   </StrictMode>,
 )

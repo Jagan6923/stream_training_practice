@@ -8,6 +8,8 @@ import Home from './Home';
 import WithoutUseMemo from './WithoutUseMemo';
 import WithUseMemo from './WithUseMemo';
 import useToggle from './useToggle';
+import PropsDrilling from './PropsDrilling'
+import WithUseContext from './WithUseContext'
 const App = () => {
 
   const [count, setCount] = useState(0);
@@ -45,13 +47,16 @@ const App = () => {
 
       {/* <Callback greet={greet} /> */}
 
-      <button onClick={toggle}>
+      {/* <button onClick={toggle}>
         {isOpen ? 'Hide description' : 'View description'}        
       </button>
 
       <p>{isOpen.toString()}</p>
 
-      {isOpen && <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rem.</h1>}
+      {isOpen && <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rem.</h1>} */}
+
+      {/* <PropsDrilling/> */}
+      <WithUseContext/>
     </>
   )
 }

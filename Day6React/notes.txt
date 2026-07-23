@@ -690,3 +690,81 @@ axios.put
 axios.delete
  
 https://fakestoreapi.com/products
+ 
+https://fakestoreapi.com/users --- List of users
+ 
+Image of the product - pass id to url (productdetails/:id) -- ProductDetails 
+useParams - access to id --- https://fakestoreapi.com/products/${id} ----Display all the details
+ 
+Forms of 2 types 
+1. Controlled Forms - State variables 
+2. UnControlled Forms - Controlled by the browser - Directly manipulated in DOM - useRef()
+ 
+input - text, number, radio, checkboxes , etc
+ 
+EventHandlers 
+- onSubmit 
+- onValidate 
+- onClick 
+- onMouseEnter 
+- onKeyPress 
+- onChange - data is provided into input  
+ 
+onchange - event - target - value ----- current value rovided by the users
+ 
+event.target = {
+    name: "",
+    value: "",
+    checked: 
+}
+ 
+Checkboxes - allowed to selcet multiple values - []
+ 
+ 
+title
+category 
+description 
+price 
+image
+ 
+const [formData, setFormData] = useState({
+    title:"Phone",
+category :"Electronics",
+description :"",
+price :""
+image :""
+ 
+})
+ 
+const handlechange = (e) => {
+    setFormData({...fromData}, e.target.name: e.target.value})
+}
+axios.post("https://fakestoreapi.com/products
+", formData )
+ 
+<input type="text" name="title" id="title" value ={} onchange={handleChange} />
+<input type="text" name="category" id="category" value ={} onchange={handleChange} />
+<input type="text" name="description" id="description" value ={} onchange={handleChange} />
+<button>submit</button>
+ 
+Create an "Offers and Coupns"
+ 
+Create a JSON file 
+[
+    {
+        id: "",
+        "CouponCode" : "",
+        "discount" : "",
+        "minPurchase" : "",
+        "xpiry" : "",
+        "status" : "Active"
+    }
+]
+ 
+- Display all coupons as cards
+- Copy Coupon Button 
+- Green badge (badge-success, badge-danger)
+- If coupon is expired, disable "copy coupon" button 
+- User clicks "Copy coupon" - Display coupon SAVE10 Copied 
+- Active - Only Active coupons 
+- Add a search box - Coupon code
