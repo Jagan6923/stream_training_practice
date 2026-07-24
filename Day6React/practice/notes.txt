@@ -1,0 +1,224 @@
+1. Create redux store 
+2. Create slice 
+3. Integrate slice into store
+4. Provide redux store to react app
+5. In jsx - function - dispatch action
+
+
+
+
+-----
+
+
+ 
+1. Create Redux store 
+2. Create slice - productslice - addToCart, clearCart , removeSingleProduct 
+3. Integrate slice into store 
+4. Provide redux store to react app 
+5. In ProductList, Add to Cart - dispatch action - addToCart - add the data 
+6. In Header, cart - no of items , click on cart - Cart component - Display the data added to the cart 
+7. Clear cart - dispatch action - clearCart 0 remove the items rom the cart
+ 
+1. configureStore() - create the store 
+2. createSlice() - create the slice
+ 
+ 
+Productlist - add to cart - pass the product 
+user -  user data - action.payload  - login details
+
+
+
+----
+
+
+store folder
+
+import { configureStore } from "@reduxjs/toolkit";
+import productSlice from "./productSlice";
+ 
+const appStore = configureStore({
+  reducer: {
+    cart: productSlice,
+  },
+});
+ 
+export default appStore;
+
+----
+
+import { createSlice } from "@reduxjs/toolkit";
+
+const productSlice = createSlice({
+  name: "cart",
+  initialState: {
+    items: [],
+  },
+  reducers: {
+    addProduct: (state, action) => {
+      // api here
+      console.log("Payload data ", action.payload);
+
+      state.items.push(action.payload);
+    },
+    clearProducts: () => {
+      return { items: [] };
+    },
+  },
+});
+
+export default productSlice.reducer;
+export const { addProduct, clearProducts } = productSlice.actions;
+// action -{ payload: hold info about the product,
+// }
+ 
+
+----
+import "./App.css";
+import ClassComponent from "./components/ClassComponent";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Carousel from "./components/Carousel";
+import Footer from "./components/Footer";
+// import CakeGallery from "./components/CakeGallery";
+// import Restaurant from "./components/Restaurant";
+// import Employee from "./components/Employee";
+import Card from "./components/Card";
+// import MarketStock from "./components/MarketStock";
+// import Conditional from "./components/Conditional";
+import CarConfigurator from "./components/CarConfigurator";
+import { Outlet } from "react-router-dom";
+import LifeCycle from "./components/LifeCycle";
+import WithoutUseMemo from "./components/WithoutUseMemo";
+import WithUseMemo from "./components/WithUseMemo";
+import { useCallback, useState } from "react";
+import Child from "./components/Child";
+import useToggle from "./components/useToggle";
+import PropsDrilling from "./components/PropsDrilling";
+import WithUseContext from "./components/WithUseContext";
+import { Provider } from "react-redux";
+import appStore from "./store/appStore";
+
+function App() {
+  let fname = "Deepika";
+  let [count, setCount] = useState(0);
+  let { isOpen, toggle } = useToggle();
+
+  let employee = {
+    eId: 101,
+    eName: "Ravi",
+    eLoc: "Pune",
+    eCompany: "Accenture",
+  };
+
+  let employee1 = {
+    eId: 102,
+    eName: "Koushik",
+    eLoc: "Chennai",
+    eCompany: "Accenture",
+  };
+
+  const greet = useCallback(() => {
+    console.log("Good Morning");
+  }, []);
+
+  return (
+    <Provider store={appStore}>
+      <div>
+        <Header />
+        <Carousel />
+        <h1>Swigaton</h1>
+        <p className="welcome-message" style={{ color: "red" }}>
+          Welcome to our online store, {fname}!
+        </p>
+        <Outlet />
+
+        <h2>{count}</h2>
+        <button className="btn btn-warning" onClick={() => setCount(count + 1)}>
+          Increement
+        </button>
+
+        <Child greet={greet} />
+
+        <button onClick={toggle}>
+          {isOpen ? "Hide Description" : "View Descripton"}
+        </button>
+
+        {isOpen && <p>Welcome to the store</p>}
+        <WithUseContext />
+        {/* <PropsDrilling /> */}
+        {/* <LifeCycle /> */}
+        {/* <WithoutUseMemo /> */}
+        {/* <WithUseMemo /> */}
+        {/* <div className="d-flex flex-wrap justify-content-center">
+        <Home
+          firstname={fname}
+          age={26}
+          place="Hyderabad"
+          employee={employee}
+        />
+        <Home
+          firstname="Kumar Swamy"
+          age={20}
+          place="Mumbai"
+          employee={employee1}
+        /> */}
+        {/* </div> */}
+        {/* <CarConfigurator /> */}
+        {/* <Conditional /> */}
+        {/* <MarketStock />
+      <Restaurant />
+      <CakeGallery />
+      <Employee /> */}
+        <Card>Great Offers: Flat 15% Off</Card>
+        {/* <ClassComponent
+        name="Siddhartha"
+        companyLoc="Accenture Pune"
+        experience={2}
+      /> */}
+        {/* <button className="btn btn-primary">Login</button> */}
+        {/* <img src="" alt="My Image" /> */}
+        <Footer />
+      </div>
+    </Provider>
+  );
+}
+
+export default App;
+
+
+----
+
+import React from "react";
+import { useDispatch } from "react-redux";
+import { addProduct } from "../store/productSlice";
+
+const ProductList = ({ product }) => {
+  const dispatch = useDispatch();
+
+  const addToCartHandler = (item) => {
+    dispatch(addProduct(item));
+  };
+  return (
+    <div className="card" style={{ width: "18rem" }}>
+      <img src={product.image} className="card-img-top" alt="..." />
+      <div className="card-body">
+        <h5 className="card-title">{product.title}</h5>
+        <p className="card-text">Rs. {product.price}</p>
+        <p className="card-text">Rs. {product.category}</p>
+
+        <p className="card-text">Rating: {product.rating.rate}⭐⭐⭐</p>
+        <button
+          className="btn btn-primary"
+          onClick={() => {
+            addToCartHandler(product);
+          }}
+        >
+          Add to cart
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default ProductList;
+ 

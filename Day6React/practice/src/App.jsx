@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react'
+import Admin from './Admin'
+import Dashboard from './Dashboard'
 import Callback from './Callback'
 import MarketStock from './MarketStock'
 import Sample from './Sample'
@@ -10,12 +11,17 @@ import WithUseMemo from './WithUseMemo';
 import useToggle from './useToggle';
 import PropsDrilling from './PropsDrilling'
 import WithUseContext from './WithUseContext'
+import Counter from './Counter'
+import Login from './Login'
+import ProtectedRoute from './ProtectedRoute'
+
+import { useState, useCallback } from 'react';
 const App = () => {
 
   const [count, setCount] = useState(0);
   const [name, setName] = useState('');
 
-  let {isOpen, toggle} = useToggle();
+  let { isOpen, toggle } = useToggle();
 
   const greet = useCallback(() => {
     console.log(`Hello, Good Morning!`);
@@ -56,7 +62,27 @@ const App = () => {
       {isOpen && <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, rem.</h1>} */}
 
       {/* <PropsDrilling/> */}
-      <WithUseContext/>
+      {/* <WithUseContext/> */}
+
+      {/* <Counter /> */}
+
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/add-user" element={
+          <ProtectedRoute allowedRoles={["Admin"]}>
+            <Admin />
+          </ProtectedRoute>
+        } />
+        <Route path="/counter" element={
+
+          <ProtectedRoute allowedRoles={["Admin", "User"]}>
+            <Counter />
+          </ProtectedRoute>
+        } />
+      </Routes>
+
     </>
   )
 }
